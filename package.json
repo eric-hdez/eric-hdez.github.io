@@ -28,10 +28,12 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "@types/node": "*",
-    "react-scripts": "*"
+    "react-scripts": "*",
+    "typescript": "*"
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
