@@ -2,6 +2,7 @@
   "name": "my-personal-website",
   "version": "1.0.0",
   "description": "My Personal Website",
+  "homepage": "https://eric-hdez.github.io",
   "author": {
     "name": "Eric Hernandez",
     "email": "eric.hdez2001@gmail.com",
@@ -13,6 +14,7 @@
     "url": "https://github.com/eric-hdez/eric-hdez.github.io"
   },
   "dependencies": {
+    "gh-pages": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "@mui/icons-material": "*",
@@ -29,7 +31,9 @@
     "react-scripts": "*"
   },
   "scripts": {
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
