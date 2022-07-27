@@ -1,6 +1,6 @@
 import React from "react";
-import { DrawerAppBar } from "./components/DrawerAppBar";
+import { NavBar } from "./components/NavBar";
 
 export const App = () => {
-    return (<DrawerAppBar />);
+    return (<NavBar />);
 }

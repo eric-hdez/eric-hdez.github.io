@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { ThemeProvider, createTheme, styled } from '@mui/material/styles';
 import LinearProgress from '@mui/material/LinearProgress';
   
-import "./Progress.css";
+// import "./Progress.css";
+
+const FastLinearProgress = styled(LinearProgress)({
+  "& .MuiLinearProgress-bar": {
+    transition: "none"
+  }
+});
 
 export const StatusBar = () => {
   const [progress, setProgress] = useState<number>(0);
@@ -18,9 +25,9 @@ export const StatusBar = () => {
   
     window.addEventListener("scroll", computeProgress);
     return () => window.removeEventListener("scroll", computeProgress);
-  }, []);
+  }, []); // on mount and unmount
   
   return (
-      <LinearProgress variant="determinate" value={progress} color="primary" />
+    <FastLinearProgress variant="determinate" value={progress} color="primary" />
   );
 }
