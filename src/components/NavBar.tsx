@@ -1,10 +1,13 @@
 import React, { createContext, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
+import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Stack from '@mui/material/Stack';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -13,6 +16,10 @@ import { theme } from './Theme';
 import { Home } from "./Home";
 import { StatusBar } from './Progress';
 import { NavDrawer } from './NavDrawer';
+import { About } from './About';
+import { Skills } from './Skills';
+import { Contact } from './Contact';
+import { Projects } from './Projects';
 
 interface AppBarContext {
   navItems: string[];
@@ -37,6 +44,7 @@ export const NavBar = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Box sx={{ display: 'flex' }} alignItems="center" justifyContent="center">
         <AppBar component="nav">
           <Toolbar>
@@ -84,10 +92,28 @@ export const NavBar = () => {
             </AppBarCtx.Provider>
           </Drawer>
         </Box>
-        <Box alignItems="center" justifyContent="center">
-          <Toolbar />
-          <Home />
-        </Box>
+        <div style={{display: 'flex', flexDirection: 'column', flexGrow: 1, alignItems: "center", justifyContent: "center"}}>
+          <Box alignItems="center" justifyContent="center" sx={{backgroundColor: "white", width: "100%"}}>
+            <Toolbar />
+            <Home />
+          </Box>
+          <Container maxWidth="lg">
+            <Grid container spacing={4} sx={{py:4}} justifyContent="center">
+              <Grid item alignItems="center" justifyContent="center" xs={12} sm={12} md={12} lg={8} xl={8}>
+                <About />
+              </Grid>
+              <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
+                <Contact />
+              </Grid>
+              <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
+                <Projects />
+              </Grid>
+               <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
+                <Skills />
+              </Grid>
+            </Grid>
+          </Container>
+        </div>
       </Box>
     </ThemeProvider>
   );
