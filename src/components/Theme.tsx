@@ -10,10 +10,13 @@ export const theme = createTheme({
     },
     secondary: {
       light: '#ff7961',
-      main: '#f44336',
+      main: '#B8ACDA', // '#f44336',
       dark: '#ba000d',
       contrastText: '#000',
     },
+  },
+  typography: {
+    fontFamily: '"Verdana", sans-serif',
   },
 });
 
