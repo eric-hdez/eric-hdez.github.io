@@ -27,12 +27,12 @@ export const Projects = () => {
             </Typography>
             <Grid container spacing={1}>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline="none">
+              <Link color="primary" underline="none">
                 Going Public Soon
               </Link>
             </Grid>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline ="none">
+              <Link color="primary" underline ="none">
                 <KeyboardDoubleArrowRightIcon fontSize="medium" />
               </Link>
             </Grid>
