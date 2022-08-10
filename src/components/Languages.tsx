@@ -33,7 +33,7 @@ export const Languages = () => {
         </Typography>
         <LinearProgressWithLabel color="secondary" value={100} />
         <Typography display="inline" variant="subtitle1" align="left">
-            Spanish - Native
+            Spanish (Native)
         </Typography>
         <LinearProgressWithLabel color="secondary" value={100} />
       </ Container>

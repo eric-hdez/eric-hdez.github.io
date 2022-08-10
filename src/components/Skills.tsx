@@ -4,6 +4,17 @@ import Container from "@mui/material/Container";
 import LinearProgress, {LinearProgressProps} from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 
+// const skillMap = new Map([
+//   ["C", 80],
+//   ["Python", 80],
+//   ["C++", 80],
+//   ["Git", 75],
+//   ["OpenAPI", 70],
+//   ["Express.js", 70],
+//   ["JS/TS/React", 70],
+//   ["PostgreSQL", 40],
+// ]);
+
 function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -50,13 +61,13 @@ export const Skills = () => {
         </Typography>
         <LinearProgressWithLabel color="secondary" value={70} />
         <Typography display="inline" variant="subtitle1" align="left">
-            JS/TS/REACT
+            JS/TS/React
         </Typography>
         <LinearProgressWithLabel color="secondary" value={60} />
         <Typography display="inline" variant="subtitle1" align="left">
             PostgreSQL
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={30} />
+        <LinearProgressWithLabel color="secondary" value={40} />
       </ Container>
     )
 }
