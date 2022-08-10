@@ -20,6 +20,7 @@ import { About } from './About';
 import { Skills } from './Skills';
 import { Contact } from './Contact';
 import { Projects } from './Projects';
+import { Education } from './Education';
 
 interface AppBarContext {
   navItems: string[];
@@ -98,18 +99,29 @@ export const NavBar = () => {
             <Home />
           </Box>
           <Container maxWidth="lg">
-            <Grid container spacing={4} sx={{py:4}} justifyContent="center">
-              <Grid item alignItems="center" justifyContent="center" xs={12} sm={12} md={12} lg={8} xl={8}>
-                <About />
+            <Grid container sx={{py: 2, ml:2}}>
+              <Grid item  xs={12} md={8} sx={{py: 2}}>
+                <Grid container spacing={4} xs={12}>
+                  <Grid item xs={12}>
+                    <About />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Projects />
+                  </Grid>
+                </Grid>
               </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
-                <Contact />
-              </Grid>
-              <Grid item xs={12} sm={12} md={12} lg={8} xl={8}>
-                <Projects />
-              </Grid>
-               <Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
-                <Skills />
+              <Grid item xs={12} md={4} sx={{py: 2}}>
+                <Grid container justifyContent="center" spacing={4} xs={12}>
+                  <Grid item xs={12}>
+                    <Contact />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Skills />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Education />
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
           </Container>
