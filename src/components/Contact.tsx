@@ -13,7 +13,7 @@ import WebIcon from '@mui/icons-material/Web';
 export const Contact = () => {
   return (
     <Container maxWidth="lg" sx={{p: 4, backgroundColor: "white"}}>
-      <Typography variant="h5" component="h1" gutterBottom>
+      <Typography variant="h5" component="h1" gutterBottom sx={{pb: 1}}>
         Contact Me
       </Typography>
       <List>
