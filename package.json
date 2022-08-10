@@ -19,15 +19,16 @@
     "@emotion/styled": "*",
     "@mui/icons-material": "*",
     "@mui/material": "*",
+    "@mui/lab": "*",
     "prop-types": "*",
     "react": "*",
     "react-dom": "*",
     "react-router-dom": "*"
   },
   "devDependencies": {
+    "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
-    "@types/node": "*",
     "react-scripts": "*",
     "typescript": "*"
   },

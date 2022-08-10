@@ -20,7 +20,7 @@ export const NavDrawer = () => {
       <List>
         {ctx?.navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center', fontFamily: "Verdana"}}>
+            <ListItemButton href={`#${item}`} sx={{ textAlign: 'center', fontFamily: "Verdana"}}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>

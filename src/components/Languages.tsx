@@ -2,6 +2,9 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import LinearProgress, {LinearProgressProps} from "@mui/material/LinearProgress";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 
 function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
@@ -19,32 +22,20 @@ function LinearProgressWithLabel(props: LinearProgressProps & { value: number })
   );
 }
 
-export const Skills = () => {
-    return (
-      <Container maxWidth="lg" sx={{p: 4, backgroundColor: "white"}}>
+export const Languages = () => {
+  return (
+    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "white"}}>
         <Typography variant="h5" component="h1" gutterBottom>
-            Skills
+            Languages
         </Typography>
         <Typography variant="subtitle1">
-            C
+            English
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={80} />
+        <LinearProgressWithLabel color="secondary" value={100} />
         <Typography display="inline" variant="subtitle1" align="left">
-            Python
+            Spanish - Native
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={80} />
-        <Typography display="inline" variant="subtitle1" align="left">
-            Open API
-        </Typography>
-        <LinearProgressWithLabel color="secondary" value={75} />
-        <Typography display="inline" variant="subtitle1" align="left">
-            JS/TS/REACT
-        </Typography>
-        <LinearProgressWithLabel color="secondary" value={50} />
-        <Typography display="inline" variant="subtitle1" align="left">
-            PostgreSQL
-        </Typography>
-        <LinearProgressWithLabel color="secondary" value={30} />
+        <LinearProgressWithLabel color="secondary" value={100} />
       </ Container>
-    )
-}
+  );
+};

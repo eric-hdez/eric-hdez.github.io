@@ -21,18 +21,18 @@ export const Projects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Paper elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
-            <LanguageIcon fontSize="large" />
+            <LanguageIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1" gutterBottom>
               My Personal Website
             </Typography>
             <Grid container spacing={1}>
             <Grid item alignItems="center" justifyContent="center">
-              <Link underline="hover" href="https://www.github.com/eric-hdez/eric-hdez.github.io">
+              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/eric-hdez.github.io">
                 Check it out
               </Link>
             </Grid>
             <Grid item alignItems="center" justifyContent="center">
-              <Link underline ="hover" href="https://www.github.com/eric-hdez/eric-hdez.github.io">
+              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/eric-hdez.github.io">
                 <KeyboardDoubleArrowRightIcon fontSize="medium" />
               </Link>
             </Grid>
@@ -41,18 +41,18 @@ export const Projects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Paper elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
-            <GamepadIcon fontSize="large" />
+            <GamepadIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1" gutterBottom>
               Snake Game
             </Typography>
             <Grid container spacing={1}>
             <Grid item alignItems="center" justifyContent="center">
-              <Link underline="hover" href="https://www.github.com/eric-hdez/snake-game">
+              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/snake-game">
                 Check it out
               </Link>
             </Grid>
             <Grid item alignItems="center" justifyContent="center">
-              <Link underline ="hover" href="https://www.github.com/eric-hdez/snake-game">
+              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/snake-game">
                 <KeyboardDoubleArrowRightIcon fontSize="medium" />
               </Link>
             </Grid>
@@ -61,18 +61,18 @@ export const Projects = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Paper elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
-            <KeyIcon fontSize="large" />
+            <KeyIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1" gutterBottom>
               Schmidt-Samoa Cryptosystem
             </Typography>
             <Grid container spacing={1}>
             <Grid item alignItems="center" justifyContent="center">
-              <Link underline="hover" href="https://www.github.com/eric-hdez/schmidt-samoa">
+              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/schmidt-samoa">
                 Check it out
               </Link>
             </Grid>
             <Grid item alignItems="center" justifyContent="center">
-              <Link underline ="hover" href="https://www.github.com/eric-hdez/schmidt-samoa">
+              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/schmidt-samoa">
                 <KeyboardDoubleArrowRightIcon fontSize="medium" />
               </Link>
             </Grid>

@@ -28,9 +28,12 @@ export const Contact = () => {
             <MailOutlineIcon />
           </ListItemIcon>
           <ListItemText primary={
-            <Link href="mailto:eherna97@ucsc.edu"
+            <Link 
+              href="mailto:eherna97@ucsc.edu"
               target="_blank"
               rel="noopener noreferrer"
+              color="secondary"
+              underline="hover"
             >
               eherna97@ucsc.edu
             </Link>
@@ -41,7 +44,10 @@ export const Contact = () => {
             <WebIcon />
           </ListItemIcon>
           <ListItemText primary={
-            <Link href="https://eric-hdez.github.io/"
+            <Link 
+              href="https://eric-hdez.github.io/"
+              color="secondary"
+              underline="hover"
             >
               eric-hdez.github.io
             </Link>

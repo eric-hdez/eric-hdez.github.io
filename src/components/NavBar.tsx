@@ -21,6 +21,8 @@ import { Skills } from './Skills';
 import { Contact } from './Contact';
 import { Projects } from './Projects';
 import { Education } from './Education';
+import { Languages } from './Languages';
+import { Experience } from './Experience';
 
 interface AppBarContext {
   navItems: string[];
@@ -28,7 +30,7 @@ interface AppBarContext {
 };
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Skills', 'Contact'];
+const navItems = ['Home', 'About', 'Projects', 'Experience', 'Contact', 'Skills', 'Education', 'Languages'];
 export const AppBarCtx = createContext<AppBarContext | null>(null);
 
 export const NavBar = () => { 
@@ -54,20 +56,23 @@ export const NavBar = () => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
+              sx={{ mr: 2, display: { md: 'none' } }}
             >
               <MenuIcon />
             </IconButton>
-            <Typography
+            {/* <Typography
               variant="h6"
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }}}
             >
               Eric Hernandez
-            </Typography>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            </Typography> */}
+            <Box display="flex"
+              justifyContent="flex-end"
+              alignItems="flex-end" 
+              sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff'}}>
+                <Button key={item} sx={{ color: '#fff'}} href={`#${item}`}>
                   {item}
                 </Button>
               ))}
@@ -84,7 +89,7 @@ export const NavBar = () => {
               keepMounted: true, // Better open performance on mobile.
             }}
             sx={{
-              display: { xs: 'block', sm: 'none' },
+              display: { xs: 'block', md: 'none' },
               '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
             }}
           >
@@ -94,7 +99,7 @@ export const NavBar = () => {
           </Drawer>
         </Box>
         <div style={{display: 'flex', flexDirection: 'column', flexGrow: 1, alignItems: "center", justifyContent: "center"}}>
-          <Box alignItems="center" justifyContent="center" sx={{backgroundColor: "white", width: "100%"}}>
+          <Box id="Home" alignItems="center" justifyContent="center" sx={{backgroundColor: "white", width: "100%"}}>
             <Toolbar />
             <Home />
           </Box>
@@ -102,24 +107,30 @@ export const NavBar = () => {
             <Grid container sx={{py: 2, ml:2}}>
               <Grid item  xs={12} md={8} sx={{py: 2}}>
                 <Grid container spacing={4} xs={12}>
-                  <Grid item xs={12}>
+                  <Grid id="About" item xs={12}>
                     <About />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid id="Projects" item xs={12}>
                     <Projects />
+                  </Grid>
+                  <Grid id="Experience" item xs={12}>
+                    <Experience />
                   </Grid>
                 </Grid>
               </Grid>
               <Grid item xs={12} md={4} sx={{py: 2}}>
                 <Grid container justifyContent="center" spacing={4} xs={12}>
-                  <Grid item xs={12}>
+                  <Grid id="Contact" item xs={12}>
                     <Contact />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid id="Skills" item xs={12}>
                     <Skills />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid id="Education" item xs={12}>
                     <Education />
+                  </Grid>
+                  <Grid id="Languages" item xs={12}>
+                    <Languages />
                   </Grid>
                 </Grid>
               </Grid>
