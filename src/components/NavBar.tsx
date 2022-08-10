@@ -72,7 +72,7 @@ export const NavBar = () => {
               alignItems="flex-end" 
               sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff'}} href={`#${item}`}>
+                <Button key={item} sx={{ color: '#fff'}} href={`#${item}`} title={item}>
                   {item}
                 </Button>
               ))}

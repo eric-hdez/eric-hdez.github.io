@@ -27,12 +27,12 @@ export const Projects = () => {
             </Typography>
             <Grid container spacing={1}>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="primary" underline="none">
+              <Link color="primary" underline="none" title="Personal Website Source Code">
                 Going Public Soon
               </Link>
             </Grid>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="primary" underline ="none">
+              <Link color="primary" underline ="none" title="Personal Website Source Code">
                 <KeyboardDoubleArrowRightIcon fontSize="medium" />
               </Link>
             </Grid>
@@ -47,12 +47,12 @@ export const Projects = () => {
             </Typography>
             <Grid container spacing={1}>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/snake-game">
+              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/snake-game" title="Snake Game Source Code">
                 Check it out
               </Link>
             </Grid>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/snake-game">
+              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/snake-game" title="Snake Game Source Code">
                 <KeyboardDoubleArrowRightIcon fontSize="medium" />
               </Link>
             </Grid>
@@ -67,12 +67,12 @@ export const Projects = () => {
             </Typography>
             <Grid container spacing={1}>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/schmidt-samoa">
+              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/schmidt-samoa" title="Schmidt Samoa Source Code">
                 Check it out
               </Link>
             </Grid>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/schmidt-samoa">
+              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/schmidt-samoa" title="Schmidt Samoa Source Code">
                 <KeyboardDoubleArrowRightIcon fontSize="medium" />
               </Link>
             </Grid>

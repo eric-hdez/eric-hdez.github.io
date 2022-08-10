@@ -27,6 +27,8 @@ export const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/ericherna19/"
+            title="Eric's LinkedIn Profile"
+            aria-label="Eric's LinkedIn Profile"
           >
             <LinkedInIcon />
           </IconButton>
@@ -34,6 +36,8 @@ export const Home = () => {
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/eric-hdez"
+            title="Eric's Github Profile"
+            aria-label="Eric's Github Profile"
           >
             <GitHubIcon />
           </IconButton>

@@ -34,6 +34,7 @@ export const Contact = () => {
               rel="noopener noreferrer"
               color="secondary"
               underline="hover"
+              title="Eric's Email"
             >
               eherna97@ucsc.edu
             </Link>
@@ -48,6 +49,7 @@ export const Contact = () => {
               href="https://eric-hdez.github.io/"
               color="secondary"
               underline="hover"
+              title="Eric's Personal Website"
             >
               eric-hdez.github.io
             </Link>
