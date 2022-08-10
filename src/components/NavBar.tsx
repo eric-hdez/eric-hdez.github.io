@@ -105,7 +105,7 @@ export const NavBar = () => {
           </Box>
           <Container maxWidth="lg">
             <Grid container sx={{py: 2, ml:2}}>
-              <Grid item  xs={12} md={8} sx={{py: 2}}>
+              <Grid item  xs={13} md={8} sx={{py: 2}}>
                 <Grid container spacing={4} xs={12}>
                   <Grid id="About" item xs={12}>
                     <About />
@@ -118,7 +118,7 @@ export const NavBar = () => {
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item xs={12} md={4} sx={{py: 2}}>
+              <Grid item xs={13} md={4} sx={{py: 2}}>
                 <Grid container justifyContent="center" spacing={4} xs={12}>
                   <Grid id="Contact" item xs={12}>
                     <Contact />
