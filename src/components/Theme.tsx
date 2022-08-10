@@ -13,7 +13,7 @@ export const theme = createTheme({
     },
     secondary: {
       light: '#ff7961',
-      main: '#66cb8c', // '#f44336',
+      main: "#8678F1", // '#66cb8c',
       dark: '#ba000d',
       contrastText: '#000',
     },
@@ -22,7 +22,3 @@ export const theme = createTheme({
     fontFamily: '"Verdana", sans-serif',
   },
 });
-
-    //   light: '#5a48a7',
-    //   main: '#311b92',
-    //   dark: '#221266',
