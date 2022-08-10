@@ -26,7 +26,7 @@ export const Education = () => {
           <ListItemIcon>
             <SchoolIcon />
           </ListItemIcon>
-          <ListItemText primary="High School Diploma" secondary="Paramount High School (2015-2019)" />
+          <ListItemText primary="High School Diploma" secondary="Paramount High School (2015 - 2019)" />
         </ListItem>
       </List>
     </Container>
