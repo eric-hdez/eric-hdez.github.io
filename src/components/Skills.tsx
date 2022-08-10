@@ -34,13 +34,25 @@ export const Skills = () => {
         </Typography>
         <LinearProgressWithLabel color="secondary" value={80} />
         <Typography display="inline" variant="subtitle1" align="left">
-            Open API
+            C++
         </Typography>
         <LinearProgressWithLabel color="secondary" value={75} />
         <Typography display="inline" variant="subtitle1" align="left">
+            Git
+        </Typography>
+        <LinearProgressWithLabel color="secondary" value={75} />
+        <Typography display="inline" variant="subtitle1" align="left">
+            Open API
+        </Typography>
+        <LinearProgressWithLabel color="secondary" value={70} />
+        <Typography display="inline" variant="subtitle1" align="left">
+            Express.js
+        </Typography>
+        <LinearProgressWithLabel color="secondary" value={70} />
+        <Typography display="inline" variant="subtitle1" align="left">
             JS/TS/REACT
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={50} />
+        <LinearProgressWithLabel color="secondary" value={60} />
         <Typography display="inline" variant="subtitle1" align="left">
             PostgreSQL
         </Typography>

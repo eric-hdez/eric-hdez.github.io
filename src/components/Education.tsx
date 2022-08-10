@@ -20,7 +20,7 @@ export const Education = () => {
           <ListItemIcon>
             <SchoolIcon />
           </ListItemIcon>
-          <ListItemText primary="B.S. in Computer Science" secondary="University of California, Santa Cruz (2019-current)" />
+          <ListItemText primary="B.S. in Computer Science" secondary="University of California, Santa Cruz (2019 - current)" />
         </ListItem>
         <ListItem disablePadding>
           <ListItemIcon>

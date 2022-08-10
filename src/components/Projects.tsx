@@ -27,12 +27,12 @@ export const Projects = () => {
             </Typography>
             <Grid container spacing={1}>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/eric-hdez.github.io">
-                Check it out
+              <Link color="secondary" underline="none">
+                Going Public Soon
               </Link>
             </Grid>
             <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/eric-hdez.github.io">
+              <Link color="secondary" underline ="none">
                 <KeyboardDoubleArrowRightIcon fontSize="medium" />
               </Link>
             </Grid>
