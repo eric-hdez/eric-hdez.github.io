@@ -19,6 +19,6 @@ export const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '"Verdana", sans-serif',
+    fontFamily: '"Trebuchet MS", "Verdana", sans-serif',
   },
 });
