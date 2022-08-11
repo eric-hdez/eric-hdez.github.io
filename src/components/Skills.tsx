@@ -47,27 +47,27 @@ export const Skills = () => {
         <Typography display="inline" variant="subtitle1" align="left">
             C++
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={75} />
+        <LinearProgressWithLabel color="secondary" value={65} />
         <Typography display="inline" variant="subtitle1" align="left">
             Git
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={75} />
+        <LinearProgressWithLabel color="secondary" value={60} />
         <Typography display="inline" variant="subtitle1" align="left">
             Open API
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={70} />
+        <LinearProgressWithLabel color="secondary" value={35} />
         <Typography display="inline" variant="subtitle1" align="left">
             Express.js
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={70} />
+        <LinearProgressWithLabel color="secondary" value={35} />
         <Typography display="inline" variant="subtitle1" align="left">
             JS/TS/React
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={60} />
+        <LinearProgressWithLabel color="secondary" value={35} />
         <Typography display="inline" variant="subtitle1" align="left">
             PostgreSQL
         </Typography>
-        <LinearProgressWithLabel color="secondary" value={40} />
+        <LinearProgressWithLabel color="secondary" value={30} />
       </ Container>
     )
 }
