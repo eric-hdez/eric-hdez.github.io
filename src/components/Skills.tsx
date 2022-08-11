@@ -53,7 +53,7 @@ export const Skills = () => {
         </Typography>
         <LinearProgressWithLabel color="secondary" value={60} />
         <Typography display="inline" variant="subtitle1" align="left">
-            Open API
+            OpenAPI
         </Typography>
         <LinearProgressWithLabel color="secondary" value={35} />
         <Typography display="inline" variant="subtitle1" align="left">
