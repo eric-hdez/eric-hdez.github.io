@@ -4,17 +4,6 @@ import Container from "@mui/material/Container";
 import LinearProgress, {LinearProgressProps} from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 
-// const skillMap = new Map([
-//   ["C", 80],
-//   ["Python", 80],
-//   ["C++", 80],
-//   ["Git", 75],
-//   ["OpenAPI", 70],
-//   ["Express.js", 70],
-//   ["JS/TS/React", 70],
-//   ["PostgreSQL", 40],
-// ]);
-
 function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
