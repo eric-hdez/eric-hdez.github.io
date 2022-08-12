@@ -13,8 +13,8 @@ import Typography from '@mui/material/Typography';
 
 export const Experience = () => {
   return (
-    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "white",}}>
-      <Typography variant="h5" component="h1" gutterBottom sx={{pb: 2}}>
+    <Container maxWidth="lg" sx={{py: 4, backgroundColor: "white",}}>
+      <Typography variant="h5" component="h1" gutterBottom sx={{pl: {xs: 2, sm: 0}, pb: 2}}>
         Experience
       </Typography>
       <Timeline position="right" sx={{px: 0}}>
