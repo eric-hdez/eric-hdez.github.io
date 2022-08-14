@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 
 export const Experience = () => {
   return (
-    <Container maxWidth="lg" sx={{py: 4, backgroundColor: "white",}}>
+    <Container maxWidth="lg" sx={{py: 4, backgroundColor: "white"}}>
       <Typography variant="h5" component="h1" gutterBottom sx={{pl: {xs: 2, sm: 0}, pb: 2}}>
         Experience
       </Typography>
@@ -53,7 +53,7 @@ export const Experience = () => {
           variant="body2"
           color="text.secondary"
         >
-          <ListItemText primary="Open to Winter 2023 internships or June 2023 graduate roles" />
+          <ListItemText primary="Open to Winter 2023 internships and June 2023 new grad/ early career opportunities" />
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
