@@ -1,13 +1,13 @@
-import React from "react";
-import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemIcon from "@mui/material/ListItemIcon";
+import React from 'react';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
 import LocationCityIcon from '@mui/icons-material/LocationCity';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import Typography from "@mui/material/Typography";
+import Typography from '@mui/material/Typography';
 import WebIcon from '@mui/icons-material/Web';
 
 export const Contact = () => {

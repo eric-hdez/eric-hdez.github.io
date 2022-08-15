@@ -8,8 +8,11 @@ import Drawer from '@mui/material/Drawer';
 import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import MuiAlert from '@mui/material/Alert';
+import Snackbar from '@mui/material/Snackbar';
 import { ThemeProvider } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 
 import { theme } from './Theme';
 import { Home } from "./Home";
@@ -34,9 +37,22 @@ export const AppBarCtx = createContext<AppBarContext | null>(null);
 
 export const NavBar = () => { 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+  const [snackOpen, setSnackOpen] = useState<boolean>(true);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleClick = () => {
+    setSnackOpen(true);
+  };
+
+  const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setSnackOpen(false);
   };
 
   const context: AppBarContext = {
@@ -59,13 +75,13 @@ export const NavBar = () => {
             >
               <MenuIcon />
             </IconButton>
-            {/* <Typography
+            <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }}}
+              sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }}}
             >
               Eric Hernandez
-            </Typography> */}
+            </Typography>
             <Box display="flex"
               justifyContent="flex-end"
               alignItems="flex-end" 
@@ -137,6 +153,11 @@ export const NavBar = () => {
           </Container>
         </div>
       </Box>
+      <Snackbar open={snackOpen} autoHideDuration={9000} onClose={handleClose}>
+        <MuiAlert onClose={handleClose} elevation={6} severity="info" variant="filled" sx={{ width: '100%' }}>
+          This page was built from scratch by me<br/> using React, Material-UI, and TypeScript.
+        </MuiAlert>
+      </Snackbar>
     </ThemeProvider>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import KeyIcon from '@mui/icons-material/Key';
@@ -18,64 +19,60 @@ export const Projects = () => {
             Projects
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Paper elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
+        <Grid item xs={12} sm={6}>
+          <Paper square elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
             <LanguageIcon fontSize="large" color="secondary" />
-            <Typography variant="h6" component="h1" gutterBottom>
-              My Personal Website
+            <Typography variant="h6" component="h1">
+              Personal Website
             </Typography>
-            <Grid container spacing={1}>
-            <Grid item alignItems="center" justifyContent="center">
-              <Link color="primary" underline="none" title="Personal Website Source Code">
-                Going Public Soon
-              </Link>
-            </Grid>
-            <Grid item alignItems="center" justifyContent="center">
-              <Link color="primary" underline ="none" title="Personal Website Source Code">
-                <KeyboardDoubleArrowRightIcon fontSize="medium" />
-              </Link>
-            </Grid>
-            </Grid>
+            <Button
+              size="medium"
+              endIcon={<KeyboardDoubleArrowRightIcon />}
+              title="Source Code Going Public Soon"
+              sx={{px:0}}
+            >
+              Going Public Soon
+            </Button>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Paper elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
+        <Grid item xs={12} sm={6}>
+          <Paper square elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
             <GamepadIcon fontSize="large" color="secondary" />
-            <Typography variant="h6" component="h1" gutterBottom>
+            <Typography variant="h6" component="h1">
               Snake Game
             </Typography>
-            <Grid container spacing={1}>
-            <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/snake-game" title="Snake Game Source Code">
+            <Button
+              size="medium"
+              color="secondary"
+              endIcon={<KeyboardDoubleArrowRightIcon />}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.github.com/eric-hdez/snake-game"
+              title="Snake Game Source Code"
+              sx={{px:0}}
+            >
                 Check it out
-              </Link>
-            </Grid>
-            <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/snake-game" title="Snake Game Source Code">
-                <KeyboardDoubleArrowRightIcon fontSize="medium" />
-              </Link>
-            </Grid>
-            </Grid>
+            </Button>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Paper elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
+        <Grid item xs={12} sm={6}>
+          <Paper square elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
             <KeyIcon fontSize="large" color="secondary" />
-            <Typography variant="h6" component="h1" gutterBottom>
+            <Typography variant="h6" component="h1">
               Schmidt-Samoa Cryptosystem
             </Typography>
-            <Grid container spacing={1}>
-            <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline="hover" href="https://www.github.com/eric-hdez/schmidt-samoa" title="Schmidt Samoa Source Code">
+            <Button
+              size="medium"
+              color="secondary"
+              endIcon={<KeyboardDoubleArrowRightIcon />}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.github.com/eric-hdez/schmidt-samoa"
+              title="Schmidt-Samoa Cryptosystem Source Code"
+              sx={{px:0}}
+            >
                 Check it out
-              </Link>
-            </Grid>
-            <Grid item alignItems="center" justifyContent="center">
-              <Link color="secondary" underline ="hover" href="https://www.github.com/eric-hdez/schmidt-samoa" title="Schmidt Samoa Source Code">
-                <KeyboardDoubleArrowRightIcon fontSize="medium" />
-              </Link>
-            </Grid>
-            </Grid>
+            </Button>
           </Paper>
         </Grid>
       </Grid>
