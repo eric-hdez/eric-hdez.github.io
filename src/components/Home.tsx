@@ -9,19 +9,24 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Typography from '@mui/material/Typography';
 
 const eric = require("../eric.png");
-
+// mx:-2, my:0,
 export const Home = () => { 
   return (
-    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "white"}}>
+    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "#eeeeee"}}>
       <Grid container spacing={4} alignItems="center" justifyContent="center">
-        <Grid container item xs={12} md={7} lg={8} order={{xs: 2, md: 2}} alignItems="center">
+        <Grid item xs={12} md={7} lg={8} order={{xs: 2, md: 2}} alignItems="center">
+          <Grid item xs={12}>
           <Typography variant="h4" sx={{marginBottom: "16px"}} textAlign="left">
             Hi There!<br />I'm Eric Hernandez.
           </Typography>
+          </Grid>
+          <Grid item xs={12}>
           <Typography variant="h6" sx={{marginBottom: "16px"}}>
             I'm a 4th year computer science student at the University of
             California, Santa Cruz.
           </Typography>
+          </Grid>
+          <Grid item xs={12}>
           <IconButton 
             edge="start"
             target="_blank"
@@ -41,13 +46,15 @@ export const Home = () => {
           >
             <GitHubIcon />
           </IconButton>
+          </Grid>
         </Grid>
         <Grid container item xs={12} md={5} lg={4} order={{xs: 1, md:1}} alignItems="center" justifyContent="center">
-          <Box sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-            <Avatar src={eric} variant="rounded" sx={{height: "262px", width: "350px"}} />
-          </Box>
+          <Avatar src={eric} variant="rounded" sx={{height: "262px", width: "350px"}} />
         </Grid>
       </Grid>
     </Container>
   );
 }
+
+// 262 350
+// 276 370

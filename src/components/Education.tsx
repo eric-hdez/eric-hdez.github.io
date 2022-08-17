@@ -9,7 +9,7 @@ import SchoolIcon from '@mui/icons-material/School';
 
 export const Education = () => {
   return (
-    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "white"}}>
+    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "#EEEEEE"}}>
       <Typography variant="h5" component="h1" gutterBottom>
         Education
       </Typography>

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 
 export const About = () => {
   return (
-    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "white"}}>
+    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "#EEEEEE"}}>
       <Grid container alignItems="center" justifyContent="center">
         <Grid container item>
           <Typography variant="h5" component="h1" gutterBottom>

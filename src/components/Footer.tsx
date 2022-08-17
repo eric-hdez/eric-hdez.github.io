@@ -4,6 +4,10 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
+import IconButton from '@mui/material/IconButton';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 function Copyright() {
   return (
@@ -20,24 +24,15 @@ function Copyright() {
 
 export default function StickyFooter() {
   return (
+    <Container maxWidth="lg" sx={{mb: 4, backgroundColor: "#eeeeee"}}>
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        minHeight: '100vh',
+        height: '100%',
       }}
     >
       <CssBaseline />
-      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
-        <Typography variant="h2" component="h1" gutterBottom>
-          Sticky footer
-        </Typography>
-        <Typography variant="h5" component="h2" gutterBottom>
-          {'Pin a footer to the bottom of the viewport.'}
-          {'The footer will move as the main element of the page grows.'}
-        </Typography>
-        <Typography variant="body1">Sticky footer placeholder.</Typography>
-      </Container>
       <Box
         component="footer"
         sx={{
@@ -50,13 +45,38 @@ export default function StickyFooter() {
               : theme.palette.grey[800],
         }}
       >
-        <Container maxWidth="sm">
-          <Typography variant="body1">
-            My sticky footer can be found here.
-          </Typography>
+        <Container maxWidth="xl" sx={{textAlign: "center"}}>
+          <IconButton 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:eherna97@ucsc.edu"
+            title="Eric's Email Address"
+            aria-label="Eric's Email Address"
+          >
+            <MailOutlineIcon />
+          </IconButton>
+          <IconButton 
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/ericherna19/"
+            title="Eric's LinkedIn Profile"
+            aria-label="Eric's LinkedIn Profile"
+          >
+            <LinkedInIcon />
+          </IconButton>
+          <IconButton
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/eric-hdez"
+            title="Eric's Github Profile"
+            aria-label="Eric's Github Profile"
+          >
+            <GitHubIcon />
+          </IconButton>
           <Copyright />
         </Container>
       </Box>
     </Box>
+    </Container>
   );
 }

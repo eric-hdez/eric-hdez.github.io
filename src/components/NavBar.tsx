@@ -5,14 +5,18 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
+import Fab from '@mui/material/Fab';
+import Fade from '@mui/material/Fade';
 import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import MenuIcon from '@mui/icons-material/Menu';
 import MuiAlert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
 import { ThemeProvider } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import { theme } from './Theme';
 import { Home } from "./Home";
@@ -25,6 +29,7 @@ import { Projects } from './Projects';
 import { Education } from './Education';
 import { Languages } from './Languages';
 import { Experience } from './Experience';
+import StickyFooter from './Footer';
 
 interface AppBarContext {
   navItems: string[];
@@ -34,6 +39,43 @@ interface AppBarContext {
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Projects', 'Experience', 'Contact', 'Skills', 'Education', 'Languages'];
 export const AppBarCtx = createContext<AppBarContext | null>(null);
+
+interface Props {
+  children: React.ReactElement;
+}
+
+function ScrollTop(props: Props) {
+  const { children } = props;
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const anchor = (
+      (event.target as HTMLDivElement).ownerDocument || document
+    ).querySelector('#Home');
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        block: 'center',
+      });
+    }
+  };
+
+  return (
+    <Fade in={trigger}>
+      <Box
+        onClick={handleClick}
+        role="presentation"
+        sx={{ position: 'fixed', bottom: 16, right: 16 }}
+      >
+        {children}
+      </Box>
+    </Fade>
+  );
+}
 
 export const NavBar = () => { 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
@@ -78,7 +120,7 @@ export const NavBar = () => {
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' }}}
+              sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block', color: '#eeeeee' }}}
             >
               Eric Hernandez
             </Typography>
@@ -87,7 +129,7 @@ export const NavBar = () => {
               alignItems="flex-end" 
               sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff'}} href={`#${item}`} title={item}>
+                <Button key={item} sx={{ color: '#eeeeee'}} href={`#${item}`} title={item}>
                   {item}
                 </Button>
               ))}
@@ -105,7 +147,7 @@ export const NavBar = () => {
             }}
             sx={{
               display: { xs: 'block', md: 'none' },
-              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+              '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, backgroundColor: '#252525' },
             }}
           >
             <AppBarCtx.Provider value={context}>
@@ -113,9 +155,12 @@ export const NavBar = () => {
             </AppBarCtx.Provider>
           </Drawer>
         </Box>
+        {/* <Grid container direction="column"> */}
+          {/* <Toolbar id="Home" sx={{backgroundColor: "black"}}/> */}
         <div style={{display: 'flex', flexDirection: 'column', flexGrow: 1, alignItems: "center", justifyContent: "center"}}>
-          <Box id="Home" alignItems="center" justifyContent="center" sx={{backgroundColor: "white", width: "100%"}}>
-            <Toolbar />
+          <Toolbar id="Home" sx={{backgroundColor: "primary"}}/>
+          <Box alignItems="center" justifyContent="center" sx={{mt: 4, width: "100%"}}>
+            {/* <Toolbar /> */}
             <Home />
           </Box>
           <Container maxWidth="lg">
@@ -151,11 +196,18 @@ export const NavBar = () => {
               </Grid>
             </Grid>
           </Container>
+          <StickyFooter />
         </div>
+        {/* </Grid> */}
       </Box>
+      <ScrollTop>
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
       <Snackbar open={snackOpen} autoHideDuration={9000} onClose={handleClose}>
         <MuiAlert onClose={handleClose} elevation={6} severity="info" variant="filled" sx={{ width: '100%' }}>
-          This page was built from scratch by me<br/> using React, Material-UI, and TypeScript.
+          I built this page from scratch using <br/> React, Material-UI, and TypeScript.
         </MuiAlert>
       </Snackbar>
     </ThemeProvider>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -12,7 +13,7 @@ import GamepadIcon from '@mui/icons-material/Gamepad';
 
 export const Projects = () => {
   return (
-    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "white"}}>
+    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "#EEEEEE"}}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant="h5" component="h1" gutterBottom>
@@ -20,7 +21,7 @@ export const Projects = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper square elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
+          <Paper square elevation={3} sx={{backgroundColor: "#EEEEEE", pt: 20, px: 4, pb: 4}}>
             <LanguageIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1">
               Personal Website
@@ -28,15 +29,18 @@ export const Projects = () => {
             <Button
               size="medium"
               endIcon={<KeyboardDoubleArrowRightIcon />}
+              rel="noopener noreferrer"
+              href="https://www.github.com/eric-hdez/eric-hdez.github.io"
               title="Source Code Going Public Soon"
               sx={{px:0}}
+              disabled
             >
               Going Public Soon
             </Button>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper square elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
+          <Paper square elevation={3} sx={{backgroundColor: "#EEEEEE", pt:20, px: 4, pb: 4}}>
             <GamepadIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1">
               Snake Game
@@ -56,7 +60,7 @@ export const Projects = () => {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper square elevation={3} sx={{pt: 20, px: 4, pb: 4}}>
+          <Paper square elevation={3} sx={{backgroundColor: "#EEEEEE", pt:20, px: 4, pb: 4}}>
             <KeyIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1">
               Schmidt-Samoa Cryptosystem

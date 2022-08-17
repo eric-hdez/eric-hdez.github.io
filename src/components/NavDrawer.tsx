@@ -13,14 +13,14 @@ export const NavDrawer = () => {
   
   return (
     <Box onClick={ctx?.handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2, fontFamily: "Verdana"}}>
+      <Typography color="#eeeeee" variant="h6" sx={{ my: 2, fontFamily: "Verdana"}}>
         Eric Hernandez
       </Typography>
       <Divider />
       <List>
         {ctx?.navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton href={`#${item}`} title={item} sx={{ textAlign: 'center', fontFamily: "Verdana"}}>
+            <ListItemButton href={`#${item}`} title={item} sx={{ color: "#eeeeee", textAlign: 'center', fontFamily: "Verdana"}}>
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
