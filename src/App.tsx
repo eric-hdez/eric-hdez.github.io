@@ -1,6 +1,6 @@
 import React from 'react';
-import {NavBar} from './components/NavBar';
+import { Portfolio } from './Portfolio';
 
 export const App = () => {
-    return (<NavBar />);
+  return <Portfolio />;
 };

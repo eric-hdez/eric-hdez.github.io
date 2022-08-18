@@ -1,19 +1,17 @@
-import React from "react";
-import { Box } from "@mui/material";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
+import React from 'react';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import KeyIcon from '@mui/icons-material/Key';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import Link from "@mui/material/Link";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 import LanguageIcon from '@mui/icons-material/Language';
 import GamepadIcon from '@mui/icons-material/Gamepad';
 
 export const Projects = () => {
   return (
-    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "#EEEEEE"}}>
+    <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Typography variant="h5" component="h1" gutterBottom>
@@ -21,7 +19,11 @@ export const Projects = () => {
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper square elevation={3} sx={{backgroundColor: "#EEEEEE", pt: 20, px: 4, pb: 4}}>
+          <Paper
+            square
+            elevation={3}
+            sx={{ backgroundColor: '#EEEEEE', pt: 20, px: 4, pb: 4 }}
+          >
             <LanguageIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1">
               Personal Website
@@ -32,7 +34,7 @@ export const Projects = () => {
               rel="noopener noreferrer"
               href="https://www.github.com/eric-hdez/eric-hdez.github.io"
               title="Source Code Going Public Soon"
-              sx={{px:0}}
+              sx={{ px: 0 }}
               disabled
             >
               Going Public Soon
@@ -40,7 +42,11 @@ export const Projects = () => {
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper square elevation={3} sx={{backgroundColor: "#EEEEEE", pt:20, px: 4, pb: 4}}>
+          <Paper
+            square
+            elevation={3}
+            sx={{ backgroundColor: '#EEEEEE', pt: 20, px: 4, pb: 4 }}
+          >
             <GamepadIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1">
               Snake Game
@@ -53,14 +59,18 @@ export const Projects = () => {
               rel="noopener noreferrer"
               href="https://www.github.com/eric-hdez/snake-game"
               title="Snake Game Source Code"
-              sx={{px:0}}
+              sx={{ px: 0 }}
             >
-                Check it out
+              Check it out
             </Button>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <Paper square elevation={3} sx={{backgroundColor: "#EEEEEE", pt:20, px: 4, pb: 4}}>
+          <Paper
+            square
+            elevation={3}
+            sx={{ backgroundColor: '#EEEEEE', pt: 20, px: 4, pb: 4 }}
+          >
             <KeyIcon fontSize="large" color="secondary" />
             <Typography variant="h6" component="h1">
               Schmidt-Samoa Cryptosystem
@@ -73,9 +83,9 @@ export const Projects = () => {
               rel="noopener noreferrer"
               href="https://www.github.com/eric-hdez/schmidt-samoa"
               title="Schmidt-Samoa Cryptosystem Source Code"
-              sx={{px:0}}
+              sx={{ px: 0 }}
             >
-                Check it out
+              Check it out
             </Button>
           </Paper>
         </Grid>

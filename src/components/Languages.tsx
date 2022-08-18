@@ -1,10 +1,14 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import LinearProgress, {LinearProgressProps} from "@mui/material/LinearProgress";
-import Typography from "@mui/material/Typography";
+import React from 'react';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import LinearProgress, {
+  LinearProgressProps,
+} from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
 
-function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
+function LinearProgressWithLabel(
+  props: LinearProgressProps & { value: number },
+) {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
       <Box sx={{ width: '100%', mr: 1 }}>
@@ -21,18 +25,16 @@ function LinearProgressWithLabel(props: LinearProgressProps & { value: number })
 
 export const Languages = () => {
   return (
-    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "#EEEEEE"}}>
-        <Typography variant="h5" component="h1" gutterBottom sx={{pb: 2}}>
-            Languages
-        </Typography>
-        <Typography variant="subtitle1">
-            English
-        </Typography>
-        <LinearProgressWithLabel color="secondary" value={100} />
-        <Typography display="inline" variant="subtitle1" align="left">
-            Spanish (Native)
-        </Typography>
-        <LinearProgressWithLabel color="secondary" value={100} />
-      </ Container>
+    <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
+      <Typography variant="h5" component="h1" gutterBottom sx={{ pb: 2 }}>
+        Languages
+      </Typography>
+      <Typography variant="subtitle1">English</Typography>
+      <LinearProgressWithLabel color="secondary" value={100} />
+      <Typography display="inline" variant="subtitle1" align="left">
+        Spanish (Native)
+      </Typography>
+      <LinearProgressWithLabel color="secondary" value={100} />
+    </Container>
   );
 };

@@ -12,8 +12,8 @@ import WebIcon from '@mui/icons-material/Web';
 
 export const Contact = () => {
   return (
-    <Container maxWidth="lg" sx={{p: 4, backgroundColor: "#EEEEEE"}}>
-      <Typography variant="h5" component="h1" gutterBottom sx={{pb: 1}}>
+    <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
+      <Typography variant="h5" component="h1" gutterBottom sx={{ pb: 1 }}>
         Contact Me
       </Typography>
       <List>
@@ -27,35 +27,39 @@ export const Contact = () => {
           <ListItemIcon>
             <MailOutlineIcon />
           </ListItemIcon>
-          <ListItemText primary={
-            <Link 
-              href="mailto:eherna97@ucsc.edu"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="secondary"
-              underline="hover"
-              title="Eric's Email"
-            >
-              eherna97@ucsc.edu
-            </Link>
-          } />
+          <ListItemText
+            primary={
+              <Link
+                href="mailto:eherna97@ucsc.edu"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="secondary"
+                underline="hover"
+                title="Eric's Email"
+              >
+                eherna97@ucsc.edu
+              </Link>
+            }
+          />
         </ListItem>
         <ListItem disablePadding>
           <ListItemIcon>
             <WebIcon />
           </ListItemIcon>
-          <ListItemText primary={
-            <Link 
-              href="https://eric-hdez.github.io/"
-              color="secondary"
-              underline="hover"
-              title="Eric's Personal Website"
-            >
-              eric-hdez.github.io
-            </Link>
-          } />
+          <ListItemText
+            primary={
+              <Link
+                href="https://eric-hdez.github.io/"
+                color="secondary"
+                underline="hover"
+                title="Eric's Personal Website"
+              >
+                eric-hdez.github.io
+              </Link>
+            }
+          />
         </ListItem>
       </List>
-    </ Container>
+    </Container>
   );
-}
+};

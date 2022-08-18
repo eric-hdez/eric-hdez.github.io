@@ -30,7 +30,16 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "react-scripts": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "babel-eslint": "*",
+    "eslint": "*",
+    "prettier": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-react": "*"
   },
   "scripts": {
     "start": "react-scripts start",
