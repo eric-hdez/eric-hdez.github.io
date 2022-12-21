@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ThemeProvider, createTheme, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import LinearProgress from '@mui/material/LinearProgress';
 
 const FastLinearProgress = styled(LinearProgress)({
@@ -12,7 +12,7 @@ export const StatusBar = () => {
   const [progress, setProgress] = useState<number>(0);
 
   useEffect(() => {
-    let computeProgress = () => {
+    const computeProgress = () => {
       const scrolled = document.documentElement.scrollTop;
       const scrollLength =
         document.documentElement.scrollHeight -

@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import IconButton from '@mui/material/IconButton';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-const eric = require('../eric.png');
+import eric from '../img/eric_headshot.jpg';
 
 export const Home = () => {
   return (
@@ -29,12 +29,12 @@ export const Home = () => {
             >
               Hi There!
               <br />
-              I'm Eric Hernandez.
+              I&apos;m Eric Hernandez.
             </Typography>
           </Grid>
           <Grid item xs={12}>
             <Typography variant="h6" sx={{ marginBottom: '16px' }}>
-              I'm a 4th year Computer Science student at the University of
+              I&apos;m a 4th year Computer Science student at the University of
               California, Santa Cruz.
             </Typography>
           </Grid>

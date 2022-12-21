@@ -62,7 +62,7 @@ export const Experience = () => {
             variant="body2"
             color="text.secondary"
           >
-            <ListItemText primary="Open to Winter 2023 internships and June 2023 new grad/ early career opportunities" />
+            <ListItemText primary="Open to Spring 2023 internships and new grad/ early career opportunities" />
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />

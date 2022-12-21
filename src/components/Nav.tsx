@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, MouseEvent } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -32,7 +32,7 @@ export const NavBar = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLDivElement | any>) => {
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
     const anchor = (
       (event.target as HTMLDivElement).ownerDocument || document
     ).querySelector(`#${event.currentTarget.innerText}`);
