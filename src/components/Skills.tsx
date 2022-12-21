@@ -15,27 +15,27 @@ const skills = [
   },
   {
     name: 'C++',
-    proficiency: 'Intermediate',
+    proficiency: 'Competent',
   },
   {
     name: 'Git',
-    proficiency: 'Intermediate',
-  },
-  {
-    name: 'OpenAPI',
-    proficiency: 'Beginner',
-  },
-  {
-    name: 'Express.js',
-    proficiency: 'Beginner',
+    proficiency: 'Competent',
   },
   {
     name: 'JS/TS/React',
-    proficiency: 'Beginner',
+    proficiency: 'Competent',
+  },
+  {
+    name: 'Express.js',
+    proficiency: 'Novice',
+  },
+  {
+    name: 'OpenAPI',
+    proficiency: 'Novice',
   },
   {
     name: 'PostgreSQL',
-    proficiency: 'Beginner',
+    proficiency: 'Novice',
   },
 ];
 
