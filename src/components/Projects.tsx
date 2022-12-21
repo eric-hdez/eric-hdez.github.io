@@ -55,7 +55,7 @@ export const Projects = () => {
                 sx={{ backgroundColor: '#EEEEEE', pt: 20, px: 4, pb: 4 }}
               >
                 {icon}
-                <Typography variant="h6" component="h1">
+                <Typography variant="h6" component="h1" noWrap>
                   {name}
                 </Typography>
                 <Button

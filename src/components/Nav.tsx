@@ -2,17 +2,12 @@ import React, { useState, MouseEvent } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 
+import { NavDrawer } from './NavDrawer';
 import { StatusBar } from './Progress';
 
 export const NavBar = () => {
@@ -37,7 +32,6 @@ export const NavBar = () => {
       (event.target as HTMLDivElement).ownerDocument || document
     ).querySelector(`#${event.currentTarget.innerText}`);
 
-    console.log(event.currentTarget.innerText);
     if (anchor) {
       anchor.scrollIntoView({
         behavior: 'smooth',
@@ -89,7 +83,13 @@ export const NavBar = () => {
         </Toolbar>
         <StatusBar />
       </AppBar>
-      <Box component="nav">
+      <NavDrawer
+        navItems={navItems}
+        toggleDrawer={handleDrawerToggle}
+        drawerClick={handleClick}
+        mobileOpen={mobileOpen}
+      />
+      {/* <Box component="nav">
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -110,14 +110,14 @@ export const NavBar = () => {
             <Typography color="#eeeeee" variant="h6" sx={{ my: 2 }}>
               Eric Hernandez
             </Typography>
-            <Divider sx={{ backgroundColor: '#eeeeee' }} />
+            <Divider sx={{ backgroundColor: '#EEEEEE' }} />
             <List>
               {navItems.map((item) => (
                 <ListItem key={item} disablePadding>
                   <ListItemButton
                     onClick={handleClick}
                     title={item}
-                    sx={{ color: '#eeeeee', textAlign: 'center' }}
+                    sx={{ color: '#EEEEEE', textAlign: 'center' }}
                   >
                     <ListItemText primary={item} />
                   </ListItemButton>
@@ -126,7 +126,7 @@ export const NavBar = () => {
             </List>
           </Box>
         </Drawer>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
