@@ -26,6 +26,10 @@ const skills = [
     proficiency: 'Competent',
   },
   {
+    name: 'HTML',
+    proficiency: 'Novice',
+  },
+  {
     name: 'Express.js',
     proficiency: 'Novice',
   },
