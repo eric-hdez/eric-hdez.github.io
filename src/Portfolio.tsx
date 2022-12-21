@@ -115,7 +115,7 @@ export const Portfolio = () => {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
-      <Snackbar open={snackOpen} autoHideDuration={9000} onClose={handleClose}>
+      <Snackbar open={snackOpen} autoHideDuration={10000} onClose={handleClose}>
         <MuiAlert
           onClose={handleClose}
           elevation={6}
