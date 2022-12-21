@@ -2,10 +2,10 @@ import React from 'react';
 import Container from '@mui/material/Container';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import Typography from '@mui/material/Typography';
+import ListItemText from '@mui/material/ListItemText';
 import SchoolIcon from '@mui/icons-material/School';
+import Typography from '@mui/material/Typography';
 
 const schools = [
   {

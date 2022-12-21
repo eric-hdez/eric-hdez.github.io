@@ -1,13 +1,13 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
+import GamepadIcon from '@mui/icons-material/Gamepad';
 import Grid from '@mui/material/Grid';
-import KeyIcon from '@mui/icons-material/Key';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import KeyIcon from '@mui/icons-material/Key';
+import LanguageIcon from '@mui/icons-material/Language';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import LanguageIcon from '@mui/icons-material/Language';
-import GamepadIcon from '@mui/icons-material/Gamepad';
 
 const projects = [
   {

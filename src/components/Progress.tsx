@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { styled } from '@mui/material/styles';
 import LinearProgress from '@mui/material/LinearProgress';
+import { styled } from '@mui/material/styles';
 
 const FastLinearProgress = styled(LinearProgress)({
   '& .MuiLinearProgress-bar': {
