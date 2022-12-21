@@ -9,86 +9,72 @@ import Typography from '@mui/material/Typography';
 import LanguageIcon from '@mui/icons-material/Language';
 import GamepadIcon from '@mui/icons-material/Gamepad';
 
+const projects = [
+  {
+    name: 'Personal Website',
+    title: 'This website you are currently on!',
+    icon: <LanguageIcon fontSize="large" color="secondary" />,
+    link: 'https://www.github.com/eric-hdez/eric-hdez.github.io',
+    directive: 'Going Public Soon',
+    disabled: true,
+    target: undefined,
+  },
+  {
+    name: 'Snake Game',
+    title: 'A simple snake game built with Python and Pygame.',
+    icon: <GamepadIcon fontSize="large" color="secondary" />,
+    link: 'https://www.github.com/eric-hdez/snake-game',
+    directive: 'Check it out',
+    disabled: false,
+    target: '_blank',
+  },
+  {
+    name: 'Schmidt-Samoa Cryptosystem',
+    title: 'A simple implementation of the Schmidt-Samoa Cryptosystem.',
+    icon: <KeyIcon fontSize="large" color="secondary" />,
+    link: 'https://www.github.com/eric-hdez/schmidt-samoa-cryptosystem',
+    directive: 'Check it out',
+    disabled: false,
+    target: '_blank',
+  },
+];
+
 export const Projects = () => {
   return (
     <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Typography variant="h5" component="h1" gutterBottom>
-            Projects
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper
-            square
-            elevation={3}
-            sx={{ backgroundColor: '#EEEEEE', pt: 20, px: 4, pb: 4 }}
-          >
-            <LanguageIcon fontSize="large" color="secondary" />
-            <Typography variant="h6" component="h1">
-              Personal Website
-            </Typography>
-            <Button
-              size="medium"
-              endIcon={<KeyboardDoubleArrowRightIcon />}
-              rel="noopener noreferrer"
-              href="https://www.github.com/eric-hdez/eric-hdez.github.io"
-              title="Source Code Going Public Soon"
-              sx={{ px: 0 }}
-              disabled
-            >
-              Going Public Soon
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper
-            square
-            elevation={3}
-            sx={{ backgroundColor: '#EEEEEE', pt: 20, px: 4, pb: 4 }}
-          >
-            <GamepadIcon fontSize="large" color="secondary" />
-            <Typography variant="h6" component="h1">
-              Snake Game
-            </Typography>
-            <Button
-              size="medium"
-              color="secondary"
-              endIcon={<KeyboardDoubleArrowRightIcon />}
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.github.com/eric-hdez/snake-game"
-              title="Snake Game Source Code"
-              sx={{ px: 0 }}
-            >
-              Check it out
-            </Button>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Paper
-            square
-            elevation={3}
-            sx={{ backgroundColor: '#EEEEEE', pt: 20, px: 4, pb: 4 }}
-          >
-            <KeyIcon fontSize="large" color="secondary" />
-            <Typography variant="h6" component="h1">
-              Schmidt-Samoa Cryptosystem
-            </Typography>
-            <Button
-              size="medium"
-              color="secondary"
-              endIcon={<KeyboardDoubleArrowRightIcon />}
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.github.com/eric-hdez/schmidt-samoa"
-              title="Schmidt-Samoa Cryptosystem Source Code"
-              sx={{ px: 0 }}
-            >
-              Check it out
-            </Button>
-          </Paper>
-        </Grid>
+      <Typography variant="h5" component="h1" gutterBottom>
+        Projects
+      </Typography>
+      <Grid container spacing={2} sx={{ pt: 2 }}>
+        {projects.map(
+          ({ name, title, icon, link, directive, disabled, target }) => (
+            <Grid item xs={12} sm={6}>
+              <Paper
+                square
+                elevation={3}
+                sx={{ backgroundColor: '#EEEEEE', pt: 20, px: 4, pb: 4 }}
+              >
+                {icon}
+                <Typography variant="h6" component="h1">
+                  {name}
+                </Typography>
+                <Button
+                  size="medium"
+                  color="secondary"
+                  endIcon={<KeyboardDoubleArrowRightIcon />}
+                  href={link}
+                  title={title}
+                  target={target}
+                  rel="noopener noreferrer"
+                  sx={{ px: 0 }}
+                  disabled={disabled}
+                >
+                  {directive}
+                </Button>
+              </Paper>
+            </Grid>
+          ),
+        )}
       </Grid>
     </Container>
   );

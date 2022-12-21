@@ -10,55 +10,54 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import Typography from '@mui/material/Typography';
 import WebIcon from '@mui/icons-material/Web';
 
+const contactInfo = [
+  {
+    contact: 'Santa Cruz, CA',
+    icon: <LocationCityIcon />,
+  },
+  {
+    contact: (
+      <Link
+        href="mailto:eherna97@ucsc.edu"
+        target="_blank"
+        rel="noopener noreferrer"
+        color="secondary"
+        underline="hover"
+        title="Eric's Email"
+      >
+        eherna97@ucsc.edu
+      </Link>
+    ),
+    icon: <MailOutlineIcon />,
+  },
+  {
+    contact: (
+      <Link
+        href="https://eric-hdez.github.io/"
+        color="secondary"
+        underline="hover"
+        title="Eric's Personal Website"
+      >
+        eric-hdez.github.io
+      </Link>
+    ),
+    icon: <WebIcon />,
+  },
+];
+
 export const Contact = () => {
   return (
     <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
-      <Typography variant="h5" component="h1" gutterBottom sx={{ pb: 1 }}>
+      <Typography variant="h5" component="h1" gutterBottom>
         Contact Me
       </Typography>
-      <List>
-        <ListItem disablePadding>
-          <ListItemIcon>
-            <LocationCityIcon />
-          </ListItemIcon>
-          <ListItemText primary="Santa Cruz, CA" />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemIcon>
-            <MailOutlineIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary={
-              <Link
-                href="mailto:eherna97@ucsc.edu"
-                target="_blank"
-                rel="noopener noreferrer"
-                color="secondary"
-                underline="hover"
-                title="Eric's Email"
-              >
-                eherna97@ucsc.edu
-              </Link>
-            }
-          />
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemIcon>
-            <WebIcon />
-          </ListItemIcon>
-          <ListItemText
-            primary={
-              <Link
-                href="https://eric-hdez.github.io/"
-                color="secondary"
-                underline="hover"
-                title="Eric's Personal Website"
-              >
-                eric-hdez.github.io
-              </Link>
-            }
-          />
-        </ListItem>
+      <List disablePadding sx={{ pt: 2 }}>
+        {contactInfo.map(({ contact, icon }) => (
+          <ListItem disablePadding>
+            <ListItemIcon>{icon}</ListItemIcon>
+            <ListItemText primary={contact} />
+          </ListItem>
+        ))}
       </List>
     </Container>
   );

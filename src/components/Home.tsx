@@ -9,6 +9,19 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import eric from '../img/eric_headshot.jpg';
 
+const buttons = [
+  {
+    link: 'https://www.linkedin.com/in/ericherna19/',
+    description: "Eric's LinkedIn Profile",
+    icon: <LinkedInIcon />,
+  },
+  {
+    link: 'https://github.com/eric-hdez',
+    description: "Eric's GitHub Profile",
+    icon: <GitHubIcon />,
+  },
+];
+
 export const Home = () => {
   return (
     <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#eeeeee' }}>
@@ -39,25 +52,18 @@ export const Home = () => {
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <IconButton
-              edge="start"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/ericherna19/"
-              title="Eric's LinkedIn Profile"
-              aria-label="Eric's LinkedIn Profile"
-            >
-              <LinkedInIcon />
-            </IconButton>
-            <IconButton
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/eric-hdez"
-              title="Eric's Github Profile"
-              aria-label="Eric's Github Profile"
-            >
-              <GitHubIcon />
-            </IconButton>
+            {buttons.map(({ link, description, icon }, index) => (
+              <IconButton
+                edge={index === 0 ? 'start' : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={link}
+                title={description}
+                aria-label={description}
+              >
+                {icon}
+              </IconButton>
+            ))}
           </Grid>
         </Grid>
         <Grid

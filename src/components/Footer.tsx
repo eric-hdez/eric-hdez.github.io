@@ -22,6 +22,24 @@ const Copyright = () => {
   );
 };
 
+const buttons = [
+  {
+    link: 'mailto:eherna97@ucsc.edu',
+    description: "Eric's Email Address",
+    icon: <MailOutlineIcon />,
+  },
+  {
+    link: 'https://www.linkedin.com/in/ericherna19/',
+    description: "Eric's LinkedIn Profile",
+    icon: <LinkedInIcon />,
+  },
+  {
+    link: 'https://github.com/eric-hdez',
+    description: "Eric's GitHub Profile",
+    icon: <GitHubIcon />,
+  },
+];
+
 export const StickyFooter = () => {
   return (
     <Container maxWidth="lg" sx={{ mb: 4, backgroundColor: '#eeeeee' }}>
@@ -46,33 +64,17 @@ export const StickyFooter = () => {
           }}
         >
           <Container maxWidth="xl" sx={{ textAlign: 'center' }}>
-            <IconButton
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:eherna97@ucsc.edu"
-              title="Eric's Email Address"
-              aria-label="Eric's Email Address"
-            >
-              <MailOutlineIcon />
-            </IconButton>
-            <IconButton
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/ericherna19/"
-              title="Eric's LinkedIn Profile"
-              aria-label="Eric's LinkedIn Profile"
-            >
-              <LinkedInIcon />
-            </IconButton>
-            <IconButton
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/eric-hdez"
-              title="Eric's Github Profile"
-              aria-label="Eric's Github Profile"
-            >
-              <GitHubIcon />
-            </IconButton>
+            {buttons.map(({ link, description, icon }) => (
+              <IconButton
+                target="_blank"
+                rel="noopener noreferrer"
+                href={link}
+                title={description}
+                aria-label={description}
+              >
+                {icon}
+              </IconButton>
+            ))}
             <Copyright />
           </Container>
         </Box>
