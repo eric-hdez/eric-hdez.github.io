@@ -15,9 +15,9 @@ const projects = [
     title: 'This website you are currently on!',
     icon: <LanguageIcon fontSize="large" color="secondary" />,
     link: 'https://www.github.com/eric-hdez/eric-hdez.github.io',
-    directive: 'Going Public Soon',
-    disabled: true,
-    target: undefined,
+    directive: 'Check it out',
+    disabled: false,
+    target: '_blank',
   },
   {
     name: 'Snake Game',
