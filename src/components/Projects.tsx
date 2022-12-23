@@ -37,8 +37,8 @@ const projects: ProjectData[] = [
     directive: 'More details',
     description: [
       'Developed my personal portfolio using Typescript, React, HTML, and CSS',
-      'Used Material UI for the user interface design',
-      'Hosted using Github Pages',
+      'Used Material UI components for the user interface design',
+      'Makes use of Github Pages as the hosting service',
     ],
     disabled: false,
   },
@@ -62,8 +62,8 @@ const projects: ProjectData[] = [
     directive: 'More details',
     description: [
       'A Python and C implementation of the Schmidt-Samoa Cryptosystem',
-      'The C implementation generates public/private keys and encrypts/decrypts files',
-      'The Python implementation works similarly, but only encrypts/decrypts stdin input',
+      'The C implementation can encrypt and decrypts files, the Python\
+      implementation can encrypt and decrypt stdin messages',
     ],
     disabled: false,
   },
