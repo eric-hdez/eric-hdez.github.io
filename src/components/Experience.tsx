@@ -23,6 +23,15 @@ const experiences = [
       part of an effort to clean up the codebase.',
   },
   {
+    title: 'Student Web Developer',
+    duration: 'Starting January 2023',
+    company: 'UCSC ITS Department',
+    description:
+      'Starting in January, I will be involved with distributing and servicing\
+      IT tickets, as well as developing web projects along with my coworkers.\
+      Notable technologies: JS, Vue, PHP, Laravel.',
+  },
+  {
     title:
       'Open to Spring 2023 internships and new grad/early career\
     opportunities',
