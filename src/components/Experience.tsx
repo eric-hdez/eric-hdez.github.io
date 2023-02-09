@@ -16,33 +16,24 @@ const experiences = [
     title: 'Software Engineer Intern',
     duration: 'Jun 2021 - Aug 2021',
     company: 'NVIDIA Corporation',
-    description:
-      'Worked with the GPU Core RM Team developing a command line tool that\
-      checks a Perforce changelist against the coding standard, checks for\
-      spelling errors, and reports any security vulnerabilities. This was\
-      part of an effort to clean up the codebase.',
+    description: `Worked with the GPU Core RM Team to develop a command line tool that checks for
+     security defects, styling issues, and spelling errors in a Perforce changelist. This tool was
+     part of an effort to clean up the codebase.`,
   },
   {
     title: 'Student Web Developer',
     duration: 'Jan 2023 - present',
     company: 'UCSC ITS Department',
-    description:
-      'Currently working on the development of a web application that allows\
-      faculty/students at UCSC to upload a poster design and complete a purchasing\
-      transaction for this print.\
-      Notable technologies: JS, Vue, PHP, Laravel.',
+    description: `Developing a web application that allows faculty and students at UCSC to upload
+     poster designs and complete transactions for these prints. Notable technologies: JS, Vue, PHP,
+     Laravel.`,
   },
 ];
 
 export const Experience = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 4, backgroundColor: '#EEEEEE' }}>
-      <Typography
-        variant="h5"
-        component="h1"
-        gutterBottom
-        sx={{ pl: { xs: 2, sm: 0 } }}
-      >
+      <Typography variant="h5" component="h1" gutterBottom sx={{ pl: { xs: 2, sm: 0 } }}>
         Experience
       </Typography>
       <Timeline position="right" sx={{ px: 0, pt: 2 }}>

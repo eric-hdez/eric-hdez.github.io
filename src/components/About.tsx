@@ -14,12 +14,11 @@ export const About = () => {
         </Grid>
         <Grid container item sx={{ pt: 2 }}>
           <Typography>
-            My interests in computer science span programming languages, compilers, computer
-            systems, and full stack web development.{' '}
+            My interest in Computer Science spans programming languages, compilers, computer
+            systems, and full-stack web development.{' '}
             <b>
-              I currently work for the UC Santa Cruz ITS department as a Student Web Developer, and
-              in the Summer of 2021, I got the opportunity to intern as a Software Engineer at
-              NVIDIA.
+              I currently work for the UC Santa Cruz ITS department as a Student Web Developer; in
+              the Summer of 2021, I got the opportunity to intern as a Software Engineer at NVIDIA.
             </b>
             <br />
             <br />
@@ -28,11 +27,11 @@ export const About = () => {
             Mentoring my peers and creating a community for them in engineering has been a
             fulfilling and rewarding experience.
             <br />
-            <br />I also work in the Jack Baskin School of Engineering at UC Santa Cruz as a group
-            tutor.{' '}
+            <br />I also work as a group tutor in the Jack Baskin School of Engineering at UC Santa
+            Cruz.{' '}
             <b>
-              Currently, I am tutoring CSE13S: Computer Systems and C Programming, and CSE130:
-              Principles of Computer Systems Design.
+              Currently, I tutor CSE13S: Computer Systems and C Programming and CSE130: Principles
+              of Computer Systems Design.
             </b>
           </Typography>
         </Grid>
