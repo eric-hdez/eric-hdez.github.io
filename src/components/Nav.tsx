@@ -10,27 +10,28 @@ import Typography from '@mui/material/Typography';
 import { NavDrawer } from './NavDrawer';
 import { StatusBar } from './Progress';
 
+const navItems = [
+  'Home',
+  'About',
+  'Projects',
+  'Experience',
+  'Contact',
+  'Skills',
+  'Education',
+  'Languages',
+];
+
 export const NavBar = () => {
-  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-  const navItems = [
-    'Home',
-    'About',
-    'Projects',
-    'Experience',
-    'Contact',
-    'Skills',
-    'Education',
-    'Languages',
-  ];
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const handleClick = (event: MouseEvent<HTMLElement>) => {
-    const anchor = (
-      (event.target as HTMLDivElement).ownerDocument || document
-    ).querySelector(`#${event.currentTarget.innerText}`);
+    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
+      `#${event.currentTarget.innerText}`,
+    );
 
     if (anchor) {
       anchor.scrollIntoView({
@@ -59,6 +60,7 @@ export const NavBar = () => {
             sx={{
               flexGrow: 1,
               display: { xs: 'block', sm: 'block', color: '#eeeeee' },
+              align: { xs: 'center' },
             }}
           >
             Eric Hernandez
@@ -89,44 +91,6 @@ export const NavBar = () => {
         drawerClick={handleClick}
         mobileOpen={mobileOpen}
       />
-      {/* <Box component="nav">
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', md: 'none' },
-            '& .MuiDrawer-paper': {
-              boxSizing: 'border-box',
-              width: 240,
-              backgroundColor: '#252525',
-            },
-          }}
-        >
-          <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography color="#eeeeee" variant="h6" sx={{ my: 2 }}>
-              Eric Hernandez
-            </Typography>
-            <Divider sx={{ backgroundColor: '#EEEEEE' }} />
-            <List>
-              {navItems.map((item) => (
-                <ListItem key={item} disablePadding>
-                  <ListItemButton
-                    onClick={handleClick}
-                    title={item}
-                    sx={{ color: '#EEEEEE', textAlign: 'center' }}
-                  >
-                    <ListItemText primary={item} />
-                  </ListItemButton>
-                </ListItem>
-              ))}
-            </List>
-          </Box>
-        </Drawer>
-      </Box> */}
     </Box>
   );
 };

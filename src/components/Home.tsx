@@ -26,20 +26,9 @@ export const Home = () => {
   return (
     <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#eeeeee' }}>
       <Grid container spacing={4} alignItems="center" justifyContent="center">
-        <Grid
-          item
-          xs={12}
-          md={7}
-          lg={8}
-          order={{ xs: 2, md: 2 }}
-          alignItems="center"
-        >
+        <Grid item xs={12} md={7} lg={8} order={{ xs: 2, md: 2 }} alignItems="center">
           <Grid item xs={12}>
-            <Typography
-              variant="h4"
-              sx={{ marginBottom: '16px' }}
-              textAlign="left"
-            >
+            <Typography variant="h4" sx={{ marginBottom: '16px' }} textAlign="left">
               Hi There!
               <br />
               I&apos;m Eric Hernandez.
@@ -47,8 +36,8 @@ export const Home = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography variant="h6" sx={{ marginBottom: '16px' }}>
-              I&apos;m a 4th year Computer Science student at the University of
-              California, Santa Cruz.
+              I&apos;m a 4th year Computer Science student at the University of California, Santa
+              Cruz.
             </Typography>
           </Grid>
           <Grid item xs={12}>
@@ -76,11 +65,7 @@ export const Home = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Avatar
-            src={eric}
-            variant="rounded"
-            sx={{ height: '262px', width: '350px' }}
-          />
+          <Avatar src={eric} variant="rounded" sx={{ height: '262px', width: '350px' }} />
         </Grid>
       </Grid>
     </Container>

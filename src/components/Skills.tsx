@@ -72,7 +72,7 @@ const skills = {
 };
 
 export const Skills = () => {
-  const [value, setValue] = useState<number>(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -83,17 +83,12 @@ export const Skills = () => {
       <Typography variant="h5" component="h1" gutterBottom>
         Skills
       </Typography>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        indicatorColor="secondary"
-        centered
-      >
+      <Tabs value={value} onChange={handleChange} indicatorColor="secondary" centered>
         {Object.keys(skills).map((key) => (
           <Tab
             label={<Typography variant="body1">{key}</Typography>}
             sx={{ textTransform: 'none' }}
-          ></Tab>
+          />
         ))}
       </Tabs>
       <Divider />

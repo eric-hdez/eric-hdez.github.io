@@ -7,18 +7,16 @@ export interface ScrollTopProps {
   children: React.ReactElement;
 }
 
-export const ScrollTop = (props: ScrollTopProps) => {
-  const { children } = props;
-
+export const ScrollTop = ({ children }: ScrollTopProps) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 100,
   });
 
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    const anchor = (
-      (event.target as HTMLDivElement).ownerDocument || document
-    ).querySelector('#Home');
+    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
+      '#Home',
+    );
 
     if (anchor) {
       anchor.scrollIntoView({

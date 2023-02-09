@@ -6,12 +6,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 const Badge = ({ label }: { label: string }) => (
-  <Chip
-    label={label}
-    size="small"
-    color="secondary"
-    sx={{ color: '#EEEEEE' }}
-  />
+  <Chip label={label} size="small" color="secondary" sx={{ color: '#EEEEEE' }} />
 );
 
 const languages = [

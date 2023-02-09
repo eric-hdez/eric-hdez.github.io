@@ -15,12 +15,7 @@ export interface NavDrawerProps {
   mobileOpen: boolean;
 }
 
-export const NavDrawer = ({
-  navItems,
-  toggleDrawer,
-  drawerClick,
-  mobileOpen,
-}: NavDrawerProps) => {
+export const NavDrawer = ({ navItems, toggleDrawer, drawerClick, mobileOpen }: NavDrawerProps) => {
   return (
     <Box component="nav">
       <Drawer

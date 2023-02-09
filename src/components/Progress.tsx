@@ -15,8 +15,7 @@ export const StatusBar = () => {
     const computeProgress = () => {
       const scrolled = document.documentElement.scrollTop;
       const scrollLength =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
       const progress = (100 * scrolled) / scrollLength;
       setProgress(progress);
@@ -26,11 +25,5 @@ export const StatusBar = () => {
     return () => window.removeEventListener('scroll', computeProgress);
   }, []); // on mount and unmount
 
-  return (
-    <FastLinearProgress
-      variant="determinate"
-      value={progress}
-      color="primary"
-    />
-  );
+  return <FastLinearProgress variant="determinate" value={progress} color="primary" />;
 };

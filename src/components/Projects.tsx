@@ -18,7 +18,7 @@ import VideogameAssetIcon from '@mui/icons-material/VideogameAsset';
 
 import { CustomizedDialog } from './Dialog';
 
-interface ProjectData {
+interface Project {
   name: string;
   title: string;
   icon: JSX.Element;
@@ -28,7 +28,7 @@ interface ProjectData {
   disabled: boolean;
 }
 
-const projects: ProjectData[] = [
+const projects: Project[] = [
   {
     name: 'Personal Portfolio',
     title: 'This website you are currently on!',
@@ -69,15 +69,7 @@ const projects: ProjectData[] = [
   },
 ];
 
-const Project = ({
-  name,
-  title,
-  icon,
-  link,
-  directive,
-  description,
-  disabled,
-}: ProjectData) => {
+const Project = ({ name, title, icon, link, directive, description, disabled }: Project) => {
   const [openDialog, setOpenDialog] = useState<boolean>(false);
 
   const handleOpenDialog = () => {
@@ -141,10 +133,7 @@ const Project = ({
             {description.map((line) => (
               <ListItem sx={{ p: 0 }}>
                 <ListItemIcon sx={{ minWidth: '30px' }}>
-                  <KeyboardArrowRightSharpIcon
-                    fontSize="medium"
-                    color="secondary"
-                  />
+                  <KeyboardArrowRightSharpIcon fontSize="medium" color="secondary" />
                 </ListItemIcon>
                 <ListItemText>{line}</ListItemText>
               </ListItem>

@@ -26,10 +26,7 @@ import { theme } from './components/Theme';
 export const Portfolio = () => {
   const [snackOpen, setSnackOpen] = useState<boolean>(true);
 
-  const handleClose = (
-    event?: React.SyntheticEvent | Event,
-    reason?: string,
-  ) => {
+  const closeSnackBar = (event?: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === 'clickaway') {
       return;
     }
@@ -52,11 +49,7 @@ export const Portfolio = () => {
           }}
         >
           <Toolbar id="Home" sx={{ backgroundColor: 'primary' }} />
-          <Box
-            alignItems="center"
-            justifyContent="center"
-            sx={{ mt: 4, width: '100%' }}
-          >
+          <Box alignItems="center" justifyContent="center" sx={{ mt: 4, width: '100%' }}>
             <Home />
           </Box>
           <Container maxWidth="lg">
@@ -69,12 +62,7 @@ export const Portfolio = () => {
                   <Grid id="Projects" item xs={12} sx={{ scrollMarginTop: 45 }}>
                     <Projects />
                   </Grid>
-                  <Grid
-                    id="Experience"
-                    item
-                    xs={12}
-                    sx={{ scrollMarginTop: 45 }}
-                  >
+                  <Grid id="Experience" item xs={12} sx={{ scrollMarginTop: 45 }}>
                     <Experience />
                   </Grid>
                 </Grid>
@@ -87,20 +75,10 @@ export const Portfolio = () => {
                   <Grid id="Skills" item xs={12} sx={{ scrollMarginTop: 45 }}>
                     <Skills />
                   </Grid>
-                  <Grid
-                    id="Education"
-                    item
-                    xs={12}
-                    sx={{ scrollMarginTop: 45 }}
-                  >
+                  <Grid id="Education" item xs={12} sx={{ scrollMarginTop: 45 }}>
                     <Education />
                   </Grid>
-                  <Grid
-                    id="Languages"
-                    item
-                    xs={12}
-                    sx={{ scrollMarginTop: 45 }}
-                  >
+                  <Grid id="Languages" item xs={12} sx={{ scrollMarginTop: 45 }}>
                     <Languages />
                   </Grid>
                 </Grid>
@@ -115,16 +93,15 @@ export const Portfolio = () => {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
-      <Snackbar open={snackOpen} autoHideDuration={10000} onClose={handleClose}>
+      <Snackbar open={snackOpen} autoHideDuration={10000} onClose={closeSnackBar}>
         <MuiAlert
-          onClose={handleClose}
+          onClose={closeSnackBar}
           elevation={6}
           severity="info"
           variant="filled"
           sx={{ width: '100%' }}
         >
-          I built this page from scratch using React, Material-UI, and
-          TypeScript. :)
+          I built this page from scratch using React, Material-UI, and TypeScript. :)
         </MuiAlert>
       </Snackbar>
     </ThemeProvider>

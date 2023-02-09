@@ -15,6 +15,20 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import CloseIcon from '@mui/icons-material/Close';
 import { Typography } from '@mui/material';
 
+export interface DialogTitleProps {
+  id: string;
+  children?: React.ReactNode;
+  onClose: () => void;
+}
+
+export interface DialogProps {
+  openDialog: boolean;
+  handleOpenDialog: () => void;
+  title: string;
+  description: string[];
+  link: string;
+}
+
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
     padding: theme.spacing(2),
@@ -23,12 +37,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     padding: theme.spacing(1),
   },
 }));
-
-export interface DialogTitleProps {
-  id: string;
-  children?: React.ReactNode;
-  onClose: () => void;
-}
 
 function BootstrapDialogTitle(props: DialogTitleProps) {
   const { children, onClose, ...other } = props;
@@ -54,14 +62,6 @@ function BootstrapDialogTitle(props: DialogTitleProps) {
   );
 }
 
-export interface DialogProps {
-  openDialog: boolean;
-  handleOpenDialog: () => void;
-  title: string;
-  description: string[];
-  link: string;
-}
-
 export const CustomizedDialog = ({
   openDialog,
   handleOpenDialog,
@@ -76,10 +76,7 @@ export const CustomizedDialog = ({
         aria-labelledby="customized-dialog-title"
         open={openDialog}
       >
-        <BootstrapDialogTitle
-          id="customized-dialog-title"
-          onClose={handleOpenDialog}
-        >
+        <BootstrapDialogTitle id="customized-dialog-title" onClose={handleOpenDialog}>
           {title}
         </BootstrapDialogTitle>
         <DialogContent dividers>
@@ -87,10 +84,7 @@ export const CustomizedDialog = ({
             {description.map((line) => (
               <ListItem sx={{ p: 0 }}>
                 <ListItemIcon sx={{ minWidth: '30px' }}>
-                  <KeyboardArrowRightSharpIcon
-                    fontSize="medium"
-                    color="secondary"
-                  />
+                  <KeyboardArrowRightSharpIcon fontSize="medium" color="secondary" />
                 </ListItemIcon>
                 <ListItemText>{line}</ListItemText>
               </ListItem>

@@ -14,32 +14,26 @@ export const About = () => {
         </Grid>
         <Grid container item sx={{ pt: 2 }}>
           <Typography>
-            Some of my current interests in computer science span programming
-            languages, distributed systems, and computer systems overall. Last
-            Summer, 2021, I interned at NVIDIA as a Software Engineer Intern for
-            the Core RM team as part of their Ignite Program.{' '}
+            My interests in computer science span programming languages, compilers, computer
+            systems, and full stack web development.{' '}
             <b>
-              I am also an incoming Student Web Developer for the UC Santa Cruz
-              ITS Department.
+              I currently work for the UC Santa Cruz ITS department as a Student Web Developer, and
+              in the Summer of 2021, I got the opportunity to intern as a Software Engineer at
+              NVIDIA.
             </b>
             <br />
             <br />
-            I have been involved in the Society of Hispanic Professional
-            Engineers at UC Santa Cruz for the last four years. I am currently
-            serving as the President of the organization, handling the day to
-            day affairs of our student chapter. Being a mentor figure for my
-            peers and uplifting them throughout their engineering careers has
-            been a fulfilling and rewarding experience.
+            I have been involved in the Society of Hispanic Professional Engineers at UC Santa Cruz
+            for the last four years. I am currently serving as the President of the organization.
+            Mentoring my peers and creating a community for them in engineering has been a
+            fulfilling and rewarding experience.
             <br />
-            <br />I also work at the Jack Baskin School of Engineering here at
-            UC Santa Cruz as an individual and group tutor. I tutor courses such
-            Data Structures and Algorithms, Full Stack Web Development, and
-            Computer Systems Design.{' '}
+            <br />I also work in the Jack Baskin School of Engineering at UC Santa Cruz as a group
+            tutor.{' '}
             <b>
-              Currently, I am tutoring CSE13S: Computer Systems and C
-              Programming, and CSE130: Principles of Computer Systems Design
+              Currently, I am tutoring CSE13S: Computer Systems and C Programming, and CSE130:
+              Principles of Computer Systems Design.
             </b>
-            .
           </Typography>
         </Grid>
       </Grid>
