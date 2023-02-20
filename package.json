@@ -19,6 +19,7 @@
     "@mui/icons-material": "*",
     "@mui/lab": "*",
     "@mui/material": "*",
+    "@mui/joy": "*",
     "gh-pages": "*",
     "prop-types": "*",
     "react": "*",

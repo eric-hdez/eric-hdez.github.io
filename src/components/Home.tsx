@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import Typography from '@mui/material/Typography';
 
 import eric from '../img/eric_headshot.jpg';
+// import eric from '../img/IMG_4133.jpeg';
 
 const buttons = [
   {

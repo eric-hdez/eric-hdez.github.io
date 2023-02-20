@@ -6,6 +6,9 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
+// import Tabs from '@mui/joy/Tabs';
+// import TabList from '@mui/joy/TabList';
+// import Tab from '@mui/joy/Tab';
 import Typography from '@mui/material/Typography';
 
 const skills = {
@@ -83,6 +86,13 @@ export const Skills = () => {
       <Typography variant="h5" component="h1" gutterBottom>
         Skills
       </Typography>
+      {/* <Tabs value={value} onChange={(event, value) => setValue(value as number)}>
+        <TabList>
+          {Object.keys(skills).map((key) => (
+            <Tab>{key}</Tab>
+          ))}
+        </TabList>
+      </Tabs> */}
       <Tabs value={value} onChange={handleChange} indicatorColor="secondary" centered>
         {Object.keys(skills).map((key) => (
           <Tab

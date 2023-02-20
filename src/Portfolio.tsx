@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import Fab from '@mui/material/Fab';
-import Grid from '@mui/material/Grid';
+// import Grid from '@mui/material/Grid';
+import { Grid } from '@mui/joy';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import MuiAlert from '@mui/material/Alert';
 import Snackbar from '@mui/material/Snackbar';
@@ -22,6 +23,7 @@ import { ScrollTop } from './components/ScrollTop';
 import { Skills } from './components/Skills';
 import { StickyFooter } from './components/Footer';
 import { theme } from './components/Theme';
+import { Stack } from '@mui/joy';
 
 export const Portfolio = () => {
   const [snackOpen, setSnackOpen] = useState<boolean>(true);
@@ -35,10 +37,56 @@ export const Portfolio = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
+      {/* <ThemeProvider theme={theme}> */}
+      {/* <CssBaseline /> */}
       <NavBar />
-      <Box sx={{ display: 'flex' }} alignItems="center" justifyContent="center">
+      <Toolbar />
+      <Box mt={4}>
+        <Home />
+      </Box>
+      <Container maxWidth="lg" sx={{ mt: 4 }}>
+        <Grid container spacing={4}>
+          <Grid xs={12} md={8}>
+            <Stack direction="column" spacing={4}>
+              <About />
+              <Projects />
+              <Experience />
+            </Stack>
+          </Grid>
+          <Grid xs={12} md={4}>
+            <Stack direction="column" spacing={4}>
+              <Contact />
+              <Skills />
+              <Education />
+              <Languages />
+            </Stack>
+          </Grid>
+        </Grid>
+      </Container>
+      <Box mt={4}>
+        <StickyFooter />
+      </Box>
+      <ScrollTop>
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
+      <Snackbar open={snackOpen} autoHideDuration={10000} onClose={closeSnackBar}>
+        <MuiAlert
+          onClose={closeSnackBar}
+          elevation={6}
+          severity="info"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          I built this page from scratch using React, Material-UI, and TypeScript. :)
+        </MuiAlert>
+      </Snackbar>
+    </>
+  );
+  {
+    /* <Box sx={{ display: 'flex' }} alignItems="center" justifyContent="center">
         <div
           style={{
             display: 'flex',
@@ -103,7 +151,9 @@ export const Portfolio = () => {
         >
           I built this page from scratch using React, Material-UI, and TypeScript. :)
         </MuiAlert>
-      </Snackbar>
-    </ThemeProvider>
-  );
+      </Snackbar> */
+  }
+  {
+    /* </ThemeProvider> */
+  }
 };
