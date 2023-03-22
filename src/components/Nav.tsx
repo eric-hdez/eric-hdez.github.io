@@ -49,7 +49,7 @@ const navClick = (event: MouseEvent<HTMLElement>) => {
 
 export const NavBar = ({ height, toggleSidebar }: NavBarProps) => {
   return (
-    <Stack height={height} direction="row" alignItems="center" gap={3} px={3}>
+    <Stack direction="row" height={height} alignItems="center" gap={3} px={3}>
       <IconButton
         variant="plain"
         aria-label="open-drawer"
