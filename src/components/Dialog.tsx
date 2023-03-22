@@ -1,109 +1,63 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import DialogActions from '@mui/material/DialogActions';
-import IconButton from '@mui/material/IconButton';
-import KeyboardArrowRightSharpIcon from '@mui/icons-material/KeyboardArrowRightSharp';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import CloseIcon from '@mui/icons-material/Close';
-import { Typography } from '@mui/material';
+import {
+  List,
+  Link,
+  ListItem,
+  ListItemDecorator,
+  Button,
+  Modal,
+  ModalDialog,
+  ModalClose,
+  Typography,
+  Stack,
+  Box,
+  Divider,
+} from '@mui/joy';
+import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 
-export interface DialogTitleProps {
-  id: string;
-  children?: React.ReactNode;
-  onClose: () => void;
-}
-
-export interface DialogProps {
-  openDialog: boolean;
-  handleOpenDialog: () => void;
+export interface ModalProps {
+  openModal: boolean;
+  toggleModal: () => void;
   title: string;
   description: string[];
   link: string;
 }
 
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
-}));
-
-function BootstrapDialogTitle(props: DialogTitleProps) {
-  const { children, onClose, ...other } = props;
-
+export const CustomModal = ({ openModal, toggleModal, title, description, link }: ModalProps) => {
   return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-      <Typography variant="h6">{children}</Typography>
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          onClick={onClose}
-          sx={{
-            position: 'absolute',
-            right: 8,
-            top: 12,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        >
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </DialogTitle>
-  );
-}
-
-export const CustomizedDialog = ({
-  openDialog,
-  handleOpenDialog,
-  title,
-  description,
-  link,
-}: DialogProps) => {
-  return (
-    <div>
-      <BootstrapDialog
-        onClose={handleOpenDialog}
-        aria-labelledby="customized-dialog-title"
-        open={openDialog}
-      >
-        <BootstrapDialogTitle id="customized-dialog-title" onClose={handleOpenDialog}>
-          {title}
-        </BootstrapDialogTitle>
-        <DialogContent dividers>
-          <List>
-            {description.map((line) => (
-              <ListItem sx={{ p: 0 }}>
-                <ListItemIcon sx={{ minWidth: '30px' }}>
-                  <KeyboardArrowRightSharpIcon fontSize="medium" color="secondary" />
-                </ListItemIcon>
-                <ListItemText>{line}</ListItemText>
+    <Modal open={openModal} onClose={toggleModal}>
+      <ModalDialog>
+        <Stack direction="column" spacing={1}>
+          <Box display="flex" justifyContent="space-between">
+            <Typography>{title}</Typography>
+            <ModalClose />
+          </Box>
+          <Divider />
+          <List sx={{ '--List-decorator-size': '25px' }}>
+            {description.map(line => (
+              <ListItem sx={{ px: '6px', py: '1px' }}>
+                <ListItemDecorator>
+                  <KeyboardArrowRightRoundedIcon color="primary" />
+                </ListItemDecorator>
+                <Typography level="body2">{line}</Typography>
               </ListItem>
             ))}
           </List>
-        </DialogContent>
-        <DialogActions>
-          <Button
-            color="secondary"
-            endIcon={<KeyboardDoubleArrowRightIcon />}
-            href={link}
-            title={title}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Check it out
-          </Button>
-        </DialogActions>
-      </BootstrapDialog>
-    </div>
+          <Box display="flex" flexGrow={1} alignItems="flex-end">
+            <Button
+              fullWidth
+              component={Link}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={title}
+              underline="none"
+            >
+              Check it out!
+            </Button>
+          </Box>
+        </Stack>
+      </ModalDialog>
+    </Modal>
   );
 };

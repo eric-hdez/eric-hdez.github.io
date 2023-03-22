@@ -1,11 +1,6 @@
 import React from 'react';
-import Container from '@mui/material/Container';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import SchoolIcon from '@mui/icons-material/School';
-import Typography from '@mui/material/Typography';
+import { List, ListItem, ListItemContent, ListItemDecorator, Stack, Typography } from '@mui/joy';
+import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 
 const schools = [
   {
@@ -20,20 +15,23 @@ const schools = [
 
 export const Education = () => {
   return (
-    <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
-      <Typography variant="h5" component="h1" gutterBottom>
+    <Stack direction="column" p={4} spacing={2}>
+      <Typography level="h5" gutterBottom>
         Education
       </Typography>
-      <List disablePadding sx={{ pt: 2 }}>
+      <List sx={{ p: 0 }}>
         {schools.map(({ degree, name }) => (
-          <ListItem disablePadding>
-            <ListItemIcon>
-              <SchoolIcon />
-            </ListItemIcon>
-            <ListItemText primary={degree} secondary={name} />
+          <ListItem sx={{ px: 0 }}>
+            <ListItemDecorator>
+              <SchoolRoundedIcon />
+            </ListItemDecorator>
+            <ListItemContent>
+              <Typography>{degree}</Typography>
+              <Typography level="body2">{name}</Typography>
+            </ListItemContent>
           </ListItem>
         ))}
       </List>
-    </Container>
+    </Stack>
   );
 };

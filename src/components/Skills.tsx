@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
-import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid';
-import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
-// import Tabs from '@mui/joy/Tabs';
-// import TabList from '@mui/joy/TabList';
-// import Tab from '@mui/joy/Tab';
-import Typography from '@mui/material/Typography';
+import { Box, Chip, Stack, Tab, TabList, Tabs, Typography } from '@mui/joy';
 
 const skills = {
   Technical: [
@@ -77,52 +67,43 @@ const skills = {
 export const Skills = () => {
   const [value, setValue] = useState(0);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+  const handleChange = (
+    event: React.SyntheticEvent<Element, Event>,
+    newValue: string | number | boolean,
+  ) => {
+    setValue(newValue as number);
   };
 
   return (
-    <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
-      <Typography variant="h5" component="h1" gutterBottom>
+    <Stack direction="column" p={4} spacing={2}>
+      <Typography level="h5" gutterBottom>
         Skills
       </Typography>
-      {/* <Tabs value={value} onChange={(event, value) => setValue(value as number)}>
-        <TabList>
-          {Object.keys(skills).map((key) => (
-            <Tab>{key}</Tab>
+      <Tabs value={value} size="md" onChange={handleChange} sx={{ borderRadius: 'md' }}>
+        <TabList variant="plain">
+          {Object.keys(skills).map((key, index) => (
+            <Tab
+              value={index}
+              variant={value === index ? 'solid' : 'plain'}
+              color={value === index ? 'primary' : 'neutral'}
+            >
+              {key}
+            </Tab>
           ))}
         </TabList>
-      </Tabs> */}
-      <Tabs value={value} onChange={handleChange} indicatorColor="secondary" centered>
-        {Object.keys(skills).map((key) => (
-          <Tab
-            label={<Typography variant="body1">{key}</Typography>}
-            sx={{ textTransform: 'none' }}
-          />
-        ))}
       </Tabs>
-      <Divider />
       {Object.entries(skills).map((entry, index) => (
         <Box hidden={value !== index}>
-          <Grid container spacing={2} sx={{ pt: 2 }}>
+          <Stack direction="column" spacing={2}>
             {entry[1].map(({ name, proficiency }) => (
-              <Grid container item justifyContent="space-between">
-                <Typography display="inline" align="left">
-                  {name}
-                </Typography>
-                {proficiency && (
-                  <Chip
-                    label={proficiency}
-                    size="small"
-                    color="secondary"
-                    sx={{ color: '#EEEEEE' }}
-                  />
-                )}
-              </Grid>
+              <Box display="flex" justifyContent="space-between">
+                <Typography>{name}</Typography>
+                {proficiency && <Chip size="sm">{proficiency}</Chip>}
+              </Box>
             ))}
-          </Grid>
+          </Stack>
         </Box>
       ))}
-    </Container>
+    </Stack>
   );
 };

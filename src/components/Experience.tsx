@@ -1,15 +1,6 @@
 import React from 'react';
-import Container from '@mui/material/Container';
-import ComputerIcon from '@mui/icons-material/Computer';
-import ListItemText from '@mui/material/ListItemText';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import Typography from '@mui/material/Typography';
+import { Avatar, Box, Divider, Stack, Typography } from '@mui/joy';
+import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
 
 const experiences = [
   {
@@ -30,39 +21,44 @@ const experiences = [
   },
 ];
 
+const Timeline = () => {
+  return (
+    <Stack direction="column">
+      {experiences.map(({ title, duration, company, description }, index) => (
+        <>
+          <Stack direction="row" spacing={1}>
+            <Stack direction="column" width="50%" pr={1} textAlign="end" justifyContent="center">
+              <Typography flexWrap="wrap">{title}</Typography>
+              <Typography level="body2">{duration}</Typography>
+            </Stack>
+            <Divider orientation="vertical" sx={{ '--Divider-thickness': '2px' }}>
+              <Avatar variant="solid" color="primary">
+                <TerminalRoundedIcon />
+              </Avatar>
+            </Divider>
+            <Stack direction="column" width="50%" pl={1} textAlign="start" justifyContent="center">
+              <Typography>{company}</Typography>
+              <Typography level="body2">{description}</Typography>
+            </Stack>
+          </Stack>
+          {index + 1 !== experiences.length && (
+            <Box display="flex" justifyContent="center" height={25}>
+              <Divider orientation="vertical" sx={{ '--Divider-thickness': '2px' }} />
+            </Box>
+          )}
+        </>
+      ))}
+    </Stack>
+  );
+};
+
 export const Experience = () => {
   return (
-    <Container maxWidth="lg" sx={{ py: 4, backgroundColor: '#EEEEEE' }}>
-      <Typography variant="h5" component="h1" gutterBottom sx={{ pl: { xs: 2, sm: 0 } }}>
+    <Stack direction="column" p={4} spacing={2}>
+      <Typography level="h5" gutterBottom>
         Experience
       </Typography>
-      <Timeline position="right" sx={{ px: 0, pt: 2 }}>
-        {experiences.map(({ title, duration, company, description }) => (
-          <TimelineItem>
-            <TimelineOppositeContent
-              sx={{ m: 'auto 0' }}
-              align="right"
-              variant="body2"
-              color="text.secondary"
-            >
-              <ListItemText primary={title} secondary={duration} />
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot color="secondary">
-                <ComputerIcon sx={{ color: 'white' }} />
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography variant="h6" component="span">
-                {company}
-              </Typography>
-              <Typography variant="subtitle2">{description}</Typography>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
-    </Container>
+      <Timeline />
+    </Stack>
   );
 };

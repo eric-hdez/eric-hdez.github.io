@@ -1,19 +1,13 @@
 import React from 'react';
-import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import LocationCityIcon from '@mui/icons-material/LocationCity';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import Typography from '@mui/material/Typography';
-import WebIcon from '@mui/icons-material/Web';
+import { Link, List, ListItem, ListItemDecorator, Stack, Typography } from '@mui/joy';
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import LocationCityRoundedIcon from '@mui/icons-material/LocationCityRounded';
+import WebRoundedIcon from '@mui/icons-material/WebRounded';
 
 const contactInfo = [
   {
     contact: 'Santa Cruz, CA',
-    icon: <LocationCityIcon />,
+    icon: <LocationCityRoundedIcon />,
   },
   {
     contact: (
@@ -21,44 +15,37 @@ const contactInfo = [
         href="mailto:eherna97@ucsc.edu"
         target="_blank"
         rel="noopener noreferrer"
-        color="secondary"
-        underline="hover"
         title="Eric's Email"
       >
         eherna97@ucsc.edu
       </Link>
     ),
-    icon: <MailOutlineIcon />,
+    icon: <EmailRoundedIcon />,
   },
   {
     contact: (
-      <Link
-        href="https://eric-hdez.github.io/"
-        color="secondary"
-        underline="hover"
-        title="Eric's Personal Website"
-      >
+      <Link href="https://eric-hdez.github.io/" title="Eric's Personal Website">
         eric-hdez.github.io
       </Link>
     ),
-    icon: <WebIcon />,
+    icon: <WebRoundedIcon />,
   },
 ];
 
 export const Contact = () => {
   return (
-    <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
-      <Typography variant="h5" component="h1" gutterBottom>
+    <Stack direction="column" p={4} spacing={2}>
+      <Typography level="h5" gutterBottom>
         Contact Me
       </Typography>
-      <List disablePadding sx={{ pt: 2 }}>
+      <List sx={{ p: 0 }}>
         {contactInfo.map(({ contact, icon }) => (
-          <ListItem disablePadding>
-            <ListItemIcon>{icon}</ListItemIcon>
-            <ListItemText primary={contact} />
+          <ListItem sx={{ p: 0 }}>
+            <ListItemDecorator>{icon}</ListItemDecorator>
+            <Typography>{contact}</Typography>
           </ListItem>
         ))}
       </List>
-    </Container>
+    </Stack>
   );
 };

@@ -1,13 +1,7 @@
 import React from 'react';
-import Chip from '@mui/material/Chip';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import { Box, Chip, Stack, Typography } from '@mui/joy';
 
-const Badge = ({ label }: { label: string }) => (
-  <Chip label={label} size="small" color="secondary" sx={{ color: '#EEEEEE' }} />
-);
+const Badge = ({ label }: { label: string }) => <Chip size="sm">{label}</Chip>;
 
 const languages = [
   {
@@ -22,22 +16,22 @@ const languages = [
 
 export const Languages = () => {
   return (
-    <Container maxWidth="lg" sx={{ p: 4, backgroundColor: '#EEEEEE' }}>
-      <Typography variant="h5" component="h1" gutterBottom>
+    <Stack direction="column" p={4} spacing={2}>
+      <Typography level="h5" gutterBottom>
         Languages
       </Typography>
-      <Grid container spacing={2} sx={{ pt: 2 }}>
+      <Stack direction="column" spacing={2}>
         {languages.map(({ name, badges }) => (
-          <Grid container item justifyContent="space-between">
-            <Typography display="inline" align="left">
-              {name}
-            </Typography>
+          <Stack direction="row" justifyContent="space-between" flexWrap="wrap">
+            <Box pr={1}>
+              <Typography>{name}</Typography>
+            </Box>
             <Stack direction="row" spacing={0.75}>
-              {badges.map((badge) => badge)}
+              {badges.map(badge => badge)}
             </Stack>
-          </Grid>
+          </Stack>
         ))}
-      </Grid>
-    </Container>
+      </Stack>
+    </Stack>
   );
 };
