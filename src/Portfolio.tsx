@@ -38,75 +38,78 @@ export const Portfolio = () => {
   return (
     <CssVarsProvider theme={theme} defaultMode="system">
       <GlobalStyles styles={{ body: { overflow: 'hidden' } }} />
-      <CssBaseline />
-      <Box width="100%" position="fixed" top={0} zIndex={3}>
+      {/* <CssBaseline /> */}
+      {/* <Box height={navBarHeight} /> */}
+      <Box width="100%" position="fixed" top={0} zIndex={3} bgcolor="background.body">
         <NavBar height={navBarHeight} toggleSidebar={toggleSidebar} />
         <Divider />
       </Box>
-      <Box height={navBarHeight} />
-      <Stack direction="row">
-        <Box height={`calc(100vh - ${navBarHeight})`} width="100%" sx={{ overflowY: 'scroll' }}>
-          <Box
-            display={{ xs: sidebarOpen ? 'flex' : 'none' }}
-            height="100%"
-            width={navDrawerWidth}
-            position="fixed"
-            bgcolor="background.body"
-            zIndex={2}
-          >
-            <NavDrawer toggleSidebar={toggleSidebar} />
-          </Box>
-          {sidebarOpen && (
+      <Stack direction="column" overflow="hidden">
+        <Box height={navBarHeight} />
+        <Stack direction="row" height="100%">
+          <Box height={`calc(100vh - ${navBarHeight})`} width="100%" overflow="scroll">
             <Box
-              display={{ md: 'none' }}
+              display={{ xs: sidebarOpen ? 'flex' : 'none' }}
               height="100%"
-              width="100%"
-              zIndex={1}
-              bgcolor="#00000055"
+              width={navDrawerWidth}
               position="fixed"
-              onClick={toggleSidebar}
-            />
-          )}
-          <Stack id="Home" direction="column" width="100%" py={4} spacing={4} alignItems="center">
-            <Container maxWidth="lg" sx={{ ...containerStyle }}>
-              <Home />
-            </Container>
-            <Container maxWidth="lg">
-              <Grid container spacing={4}>
-                <Grid xs={12} md={8}>
-                  <Stack direction="column" spacing={4} alignItems="center">
-                    {Object.entries({
-                      About: <About />,
-                      Experience: <Experience />,
-                      Projects: <Projects />,
-                    }).map(entry => (
-                      <Box id={`${entry[0]}`} {...boxStyle} sx={{ scrollMarginTop: 20 }}>
-                        {entry[1]}
-                      </Box>
-                    ))}
-                  </Stack>
+              bgcolor="background.body"
+              zIndex={2}
+            >
+              <NavDrawer toggleSidebar={toggleSidebar} />
+            </Box>
+            {sidebarOpen && (
+              <Box
+                display={{ md: 'none' }}
+                height="100%"
+                width="100%"
+                zIndex={1}
+                bgcolor="#00000055"
+                position="fixed"
+                onClick={toggleSidebar}
+              />
+            )}
+            <Stack id="Home" direction="column" width="100%" py={4} spacing={4} alignItems="center">
+              <Container maxWidth="lg" sx={{ ...containerStyle }}>
+                <Home />
+              </Container>
+              <Container maxWidth="lg">
+                <Grid container spacing={4}>
+                  <Grid xs={12} md={8}>
+                    <Stack direction="column" spacing={4} alignItems="center">
+                      {Object.entries({
+                        About: <About />,
+                        Experience: <Experience />,
+                        Projects: <Projects />,
+                      }).map(entry => (
+                        <Box id={`${entry[0]}`} {...boxStyle} sx={{ scrollMarginTop: 20 }}>
+                          {entry[1]}
+                        </Box>
+                      ))}
+                    </Stack>
+                  </Grid>
+                  <Grid xs={12} md={4}>
+                    <Stack direction="column" spacing={4} alignItems="center">
+                      {Object.entries({
+                        Contact: <Contact />,
+                        Skills: <Skills />,
+                        Education: <Education />,
+                        Languages: <Languages />,
+                      }).map(entry => (
+                        <Box id={`${entry[0]}`} {...boxStyle} sx={{ scrollMarginTop: 20 }}>
+                          {entry[1]}
+                        </Box>
+                      ))}
+                    </Stack>
+                  </Grid>
                 </Grid>
-                <Grid xs={12} md={4}>
-                  <Stack direction="column" spacing={4} alignItems="center">
-                    {Object.entries({
-                      Contact: <Contact />,
-                      Skills: <Skills />,
-                      Education: <Education />,
-                      Languages: <Languages />,
-                    }).map(entry => (
-                      <Box id={`${entry[0]}`} {...boxStyle} sx={{ scrollMarginTop: 20 }}>
-                        {entry[1]}
-                      </Box>
-                    ))}
-                  </Stack>
-                </Grid>
-              </Grid>
-            </Container>
-            <Container maxWidth="lg" sx={{ ...containerStyle }}>
-              <StickyFooter />
-            </Container>
-          </Stack>
-        </Box>
+              </Container>
+              <Container maxWidth="lg" sx={{ ...containerStyle }}>
+                <StickyFooter />
+              </Container>
+            </Stack>
+          </Box>
+        </Stack>
       </Stack>
     </CssVarsProvider>
   );
