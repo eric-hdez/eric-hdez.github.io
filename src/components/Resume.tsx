@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, List, ListItem, ListItemDecorator, Stack, Typography } from '@mui/joy';
-import FileDownloadRoundedIcon from '@mui/icons-material/FileDownloadRounded';
+import { Link, Stack, Typography } from '@mui/joy';
 import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
 import ResumePdf from '../resume/erich_resume.pdf';
 

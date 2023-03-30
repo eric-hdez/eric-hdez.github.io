@@ -17,6 +17,7 @@ import EastRoundedIcon from '@mui/icons-material/EastRounded';
 import HttpRoundedIcon from '@mui/icons-material/HttpRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 import KeyRoundedIcon from '@mui/icons-material/KeyRounded';
+import StoreRoundedIcon from '@mui/icons-material/StoreRounded';
 import VideogameAssetRoundedIcon from '@mui/icons-material/VideogameAssetRounded';
 
 import { CustomModal } from './Dialog';
@@ -37,14 +38,27 @@ const iconStyle = {
 
 const projects: Project[] = [
   {
+    name: 'Capstone Project: Baskin Marketplace',
+    title: 'A Full Stack Marketplace Web Application',
+    icon: <StoreRoundedIcon color="primary" sx={iconStyle} />,
+    link: 'https://www.baskin.app',
+    directive: 'More details',
+    description: [
+      'Collaborated on a full stack marketplace web app with 5 other students',
+      `Applied knowledge of TypeScript, Next.js, GraphQL, PostgresQL, Microservices,
+       CI, and Containerization`,
+    ],
+    disabled: false,
+  },
+  {
     name: 'Personal Portfolio',
-    title: 'This website you are currently on!',
+    title: 'The website you are currently on!',
     icon: <CodeRoundedIcon color="primary" sx={iconStyle} />,
     link: 'https://www.github.com/eric-hdez/eric-hdez.github.io',
     directive: 'More details',
     description: [
-      'Developed a personal portfolio using Typescript, React.js, Material UI, and Joy UI',
-      'website is hosted using Github Pages',
+      'Developed this personal website using Typescript, React.js, Material UI, and Joy UI',
+      'Website is hosted via Github Pages',
     ],
     disabled: false,
   },
@@ -68,7 +82,7 @@ const projects: Project[] = [
     directive: 'More details',
     description: [
       'Classic game of Snake, implemented in Python using Pygame',
-      'Implements a start and end screen with replayability',
+      'Implements start and end screens with replayability and tracks single session high score',
     ],
     disabled: false,
   },
@@ -79,7 +93,7 @@ const projects: Project[] = [
     link: 'https://www.github.com/eric-hdez/schmidt-samoa-cryptosystem',
     directive: 'More details',
     description: [
-      'A Python and C implementation of the Schmidt-Samoa Cryptosystem',
+      'Python and C implementation of the Schmidt-Samoa Cryptosystem',
       'C implementation uses the GNU Multiple Precision Library',
     ],
     disabled: false,
@@ -117,16 +131,18 @@ const Project = ({ name, title, icon, link, directive, description }: Project) =
         <Box pl={2} width="100%" height="100%" display={{ xs: 'none', sm: 'block' }}>
           <Stack direction="column" height="inherit">
             <Typography>Description</Typography>
-            <List sx={{ '--List-decorator-size': '25px' }}>
-              {description.map(line => (
-                <ListItem sx={{ px: '6px', py: '1px' }}>
-                  <ListItemDecorator>
-                    <KeyboardArrowRightRoundedIcon color="primary" />
-                  </ListItemDecorator>
-                  <Typography level="body2">{line}</Typography>
-                </ListItem>
-              ))}
-            </List>
+            <Box my={1} sx={{ overflow: { md: 'scroll' } }}>
+              <List sx={{ mx: 0, '--List-decorator-size': '25px' }}>
+                {description.map(line => (
+                  <ListItem sx={{ px: '0px', py: '1px' }}>
+                    <ListItemDecorator>
+                      <KeyboardArrowRightRoundedIcon color="primary" />
+                    </ListItemDecorator>
+                    <Typography level="body2">{line}</Typography>
+                  </ListItem>
+                ))}
+              </List>
+            </Box>
             <Box display="flex" flexGrow={1} alignItems="flex-end">
               <Button
                 fullWidth

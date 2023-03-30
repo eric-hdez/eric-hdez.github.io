@@ -26,7 +26,7 @@ const boxStyle = {
 };
 
 const navBarHeight = '70px';
-const navDrawerWidth = '240px';
+// const navDrawerWidth = '240px';
 
 const BackDrop = ({ onClick }: { onClick: () => void }) => {
   return (
