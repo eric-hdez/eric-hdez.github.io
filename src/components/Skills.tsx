@@ -16,28 +16,40 @@ const skills = {
       proficiency: 'Competent',
     },
     {
-      name: 'Git',
+      name: 'TypeScript',
       proficiency: 'Competent',
     },
     {
-      name: 'JS/TS/React',
+      name: 'JavaScript',
       proficiency: 'Competent',
     },
     {
-      name: 'HTML',
-      proficiency: 'Novice',
+      name: 'React.js',
+      proficiency: 'Competent',
+    },
+    {
+      name: 'Node.js',
+      proficiency: 'Competent',
     },
     {
       name: 'Express.js',
-      proficiency: 'Novice',
-    },
-    {
-      name: 'OpenAPI',
-      proficiency: 'Novice',
+      proficiency: 'Competent',
     },
     {
       name: 'PostgreSQL',
-      proficiency: 'Novice',
+      proficiency: 'Competent',
+    },
+    {
+      name: 'REST APIs',
+      proficiency: 'Competent',
+    },
+    {
+      name: 'GraphQL',
+      proficiency: 'Competent',
+    },
+    {
+      name: 'Git',
+      proficiency: 'Competent',
     },
   ],
   Personal: [

@@ -8,6 +8,7 @@ import { Home } from './components/Home';
 import { Languages } from './components/Languages';
 import { NavBar, NavDrawer } from './components/Nav';
 import { Projects } from './components/Projects';
+import { Resume } from './components/Resume';
 import { Skills } from './components/Skills';
 import { StickyFooter } from './components/Footer';
 import theme from './components/Theme';
@@ -60,8 +61,8 @@ export const Portfolio = () => {
         <Box
           display={{ xs: sidebarOpen ? 'flex' : 'none' }}
           position="fixed"
-          height="inherit"
-          width={navDrawerWidth}
+          height="max-content"
+          width="inherit"
           zIndex={2}
           bgcolor="background.body"
         >
@@ -82,7 +83,7 @@ export const Portfolio = () => {
                       Experience: <Experience />,
                       Projects: <Projects />,
                     }).map(entry => (
-                      <Box id={`${entry[0]}`} {...boxStyle} sx={{ scrollMarginTop: 85 }}>
+                      <Box id={`${entry[0]}`} sx={{ ...boxStyle, scrollMarginTop: 85 }}>
                         {entry[1]}
                       </Box>
                     ))}
@@ -92,11 +93,12 @@ export const Portfolio = () => {
                   <Stack direction="column" spacing={4} alignItems="center">
                     {Object.entries({
                       Contact: <Contact />,
+                      Resume: <Resume />,
                       Skills: <Skills />,
                       Education: <Education />,
                       Languages: <Languages />,
                     }).map(entry => (
-                      <Box id={`${entry[0]}`} {...boxStyle} sx={{ scrollMarginTop: 85 }}>
+                      <Box id={`${entry[0]}`} sx={{ ...boxStyle, scrollMarginTop: 85 }}>
                         {entry[1]}
                       </Box>
                     ))}

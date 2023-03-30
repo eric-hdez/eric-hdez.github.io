@@ -27,6 +27,7 @@ const navItems = [
   'Projects',
   'Experience',
   'Contact',
+  'Resume',
   'Skills',
   'Education',
   'Languages',
@@ -49,18 +50,18 @@ const navClick = (event: MouseEvent<HTMLElement>) => {
 
 export const NavBar = ({ height, toggleSidebar }: NavBarProps) => {
   return (
-    <Stack direction="row" height={height} alignItems="center" gap={3} px={3}>
+    <Stack direction="row" height={height} alignItems="center" gap={2} px={3}>
       <IconButton
         variant="plain"
         aria-label="open-drawer"
         onClick={toggleSidebar}
-        sx={{ display: { md: 'none' } }}
+        sx={{ display: { lg: 'none' } }}
       >
         <MenuIcon />
       </IconButton>
       <Typography level="h5">Eric Hernandez</Typography>
       <Box display="flex" flexGrow={1} justifyContent="flex-end">
-        <Box display={{ xs: 'none', md: 'flex' }}>
+        <Box display={{ xs: 'none', lg: 'flex' }}>
           {navItems.map(item => (
             <Button
               variant="plain"
@@ -99,14 +100,49 @@ export const NavDrawer = ({ toggleSidebar }: NavDrawerProps) => {
   };
 
   return (
-    <List>
+    // <Stack direction="column" p={1.25} spacing={1.25}>
+    //   {navItems.map(item => (
+    //     <Button
+    //       fullWidth
+    //       variant="plain"
+    //       onClick={navClick}
+    //       sx={{
+    //         display: 'flex',
+    //         justifyContent: 'flex-start',
+    //         '&:hover': {
+    //           bgcolor: 'transparent',
+    //         },
+    //       }}
+    //     >
+    //       <Typography
+    //         sx={{
+    //           '&:hover': {
+    //             color: 'var(--joy-palette-primary-plainColor)',
+    //           },
+    //         }}
+    //       >
+    //         {item}
+    //       </Typography>
+    //     </Button>
+    //   ))}
+    // </Stack>
+    <List sx={{ p: 1.5 }}>
       {navItems.map(item => (
         <ListItem key={item}>
           <ListItemButton
             onClick={drawerClick}
-            sx={{ display: 'flex', justifyContent: 'center', p: 2 }}
+            sx={{
+              display: 'flex',
+              py: 1.5,
+              '&:hover': { bgcolor: 'transparent' },
+            }}
           >
-            {item}
+            <Typography
+              fontWeight="lg"
+              sx={{ '&:hover': { color: 'var(--joy-palette-primary-plainColor)' } }}
+            >
+              {item}
+            </Typography>
           </ListItemButton>
         </ListItem>
       ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Grid, IconButton, Stack, Typography } from '@mui/joy';
+import { Avatar, Grid, IconButton, Link, Stack, Typography } from '@mui/joy';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
@@ -22,7 +22,10 @@ export const Home = () => {
   return (
     <Grid container m={0} py={4} spacing={4} alignItems="center" justifyContent="center">
       <Grid container xs={12} md={5} lg={4} justifyContent="center">
-        <Avatar src={eric} sx={{ height: '262px', width: '360px', borderRadius: 3 }} />
+        <Avatar
+          src={eric}
+          sx={{ height: '262px', width: '360px', borderRadius: 'var(--joy-radius-sm)' }}
+        />
       </Grid>
       <Grid xs={12} md={7} lg={8}>
         <Stack direction="column" gap={4}>
@@ -38,6 +41,7 @@ export const Home = () => {
           <Stack direction="row" spacing={1}>
             {buttons.map(({ link, description, icon }) => (
               <IconButton
+                component={Link}
                 target="_blank"
                 rel="noopener noreferrer"
                 href={link}

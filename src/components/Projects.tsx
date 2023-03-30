@@ -14,6 +14,7 @@ import {
 } from '@mui/joy';
 import CodeRoundedIcon from '@mui/icons-material/CodeRounded';
 import EastRoundedIcon from '@mui/icons-material/EastRounded';
+import HttpRoundedIcon from '@mui/icons-material/HttpRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 import KeyRoundedIcon from '@mui/icons-material/KeyRounded';
 import VideogameAssetRoundedIcon from '@mui/icons-material/VideogameAssetRounded';
@@ -30,11 +31,15 @@ interface Project {
   disabled: boolean;
 }
 
+const iconStyle = {
+  fontSize: '36px',
+};
+
 const projects: Project[] = [
   {
     name: 'Personal Portfolio',
     title: 'This website you are currently on!',
-    icon: <CodeRoundedIcon color="primary" sx={{ fontSize: '30px' }} />,
+    icon: <CodeRoundedIcon color="primary" sx={iconStyle} />,
     link: 'https://www.github.com/eric-hdez/eric-hdez.github.io',
     directive: 'More details',
     description: [
@@ -44,9 +49,21 @@ const projects: Project[] = [
     disabled: false,
   },
   {
+    name: 'Multi-threaded HTTP Server',
+    title: 'A multi-threaded HTTP Server',
+    icon: <HttpRoundedIcon color="primary" sx={iconStyle} />,
+    link: 'https://www.github.com/eric-hdez/httpserver',
+    directive: 'More details',
+    description: [
+      'Multi-threaded HTTP Server in C that serves atomic GET, PUT, and APPEND requests',
+      'Implements asynchronous IO using epoll and non-blocking IO',
+    ],
+    disabled: false,
+  },
+  {
     name: 'Snake Game',
     title: 'A simple snake game built with Python and Pygame.',
-    icon: <VideogameAssetRoundedIcon color="primary" sx={{ fontSize: '30px' }} />,
+    icon: <VideogameAssetRoundedIcon color="primary" sx={iconStyle} />,
     link: 'https://www.github.com/eric-hdez/snake-game',
     directive: 'More details',
     description: [
@@ -58,7 +75,7 @@ const projects: Project[] = [
   {
     name: 'Schmidt-Samoa Cryptosystem',
     title: 'A simple implementation of the Schmidt-Samoa Cryptosystem.',
-    icon: <KeyRoundedIcon color="primary" sx={{ fontSize: '30px' }} />,
+    icon: <KeyRoundedIcon color="primary" sx={iconStyle} />,
     link: 'https://www.github.com/eric-hdez/schmidt-samoa-cryptosystem',
     directive: 'More details',
     description: [
@@ -80,9 +97,9 @@ const Project = ({ name, title, icon, link, directive, description }: Project) =
     <>
       <Card orientation="horizontal" variant="outlined" sx={{ width: '100%', height: '240px' }}>
         <Box minWidth="180px" maxWidth="180px">
-          <Stack direction="column" height="100%" justifyContent="flex-end">
+          <Stack direction="column" height="100%" justifyContent="flex-end" gap={1}>
             {icon}
-            {name}
+            <Typography>{name}</Typography>
             <Link
               component="button"
               variant="plain"

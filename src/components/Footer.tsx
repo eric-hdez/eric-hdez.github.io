@@ -39,6 +39,7 @@ export const StickyFooter = () => {
       <Stack direction="row" spacing={1}>
         {buttons.map(({ link, description, icon }) => (
           <IconButton
+            component={Link}
             target="_blank"
             rel="noopener noreferrer"
             href={link}
