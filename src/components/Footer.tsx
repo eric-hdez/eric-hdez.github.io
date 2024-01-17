@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { CssBaseline, IconButton, Link, Stack, Typography } from '@mui/joy';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { CssBaseline, Button, Link, Stack, Typography, Box } from '@mui/joy';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 
 const Copyright = () => {
@@ -20,16 +18,6 @@ const buttons = [
     description: 'Eric\'s Email Address',
     icon: <EmailRoundedIcon />,
   },
-  {
-    link: 'https://www.linkedin.com/in/eric-hdez',
-    description: 'Eric\'s LinkedIn Profile',
-    icon: <LinkedInIcon />,
-  },
-  {
-    link: 'https://github.com/eric-hdez',
-    description: 'Eric\'s GitHub Profile',
-    icon: <GitHubIcon />,
-  },
 ];
 
 export const StickyFooter = () => {
@@ -38,20 +26,27 @@ export const StickyFooter = () => {
       <CssBaseline />
       <Stack direction="row" spacing={1}>
         {buttons.map(({ link, description, icon }) => (
-          <IconButton
-            component={Link}
+          <Button
+            startDecorator={icon}
+            component="a"
             target="_blank"
             rel="noopener noreferrer"
             href={link}
             title={description}
             aria-label={description}
-            color="primary"
+            size="lg"
+            variant="outlined"
           >
-            {icon}
-          </IconButton>
+            eric-hdez@proton.me
+          </Button>
         ))}
       </Stack>
       <Copyright />
+      <Box>
+        <Typography level="title-md" color="warning">
+          This Website is Still Being Touched Up :D
+        </Typography>
+      </Box>
     </Stack>
   );
 };

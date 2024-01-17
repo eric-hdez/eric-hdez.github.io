@@ -1,20 +1,12 @@
 import React from 'react';
-import { Link, Stack, Typography } from '@mui/joy';
-import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
-import ResumePdf from '../resume/eric_hdez_resume_sept-8.pdf';
-
-const resumeLink = (
-  <Link href={ResumePdf} target="_blank" rel="noopener noreferrer" title="Eric's Resume">
-    <LaunchRoundedIcon />
-  </Link>
-);
+import { Box } from '@mui/joy';
+import ResumePdf from '../resume/eric_hdez_resume_dec.pdf';
 
 export const Resume = () => {
   return (
-    <Stack direction="column" p={4} spacing={2}>
-      <Typography level="h4" endDecorator={resumeLink}>
-        Resume
-      </Typography>
-    </Stack>
+    // calc(100vh - 316px)
+    <Box height="535px">
+      <embed src={ResumePdf} type="application/pdf" width="100%" height="100%" />
+    </Box>
   );
 };

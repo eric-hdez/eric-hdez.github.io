@@ -16,8 +16,9 @@ export default function ModeToggle() {
   return (
     <IconButton
       aria-label="mode-toggle"
-      variant="plain"
-      color="primary"
+      variant="outlined"
+      color="warning"
+      size="lg"
       onClick={() => (mode === 'light' ? setMode('dark') : setMode('light'))}
     >
       {mode === 'light' ? <DarkModeRoundedIcon /> : <LightModeRoundedIcon />}
