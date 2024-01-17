@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Chip, Stack, Tab, TabList, Tabs, Typography } from '@mui/joy';
+import { Box, Chip, Stack, Tab, TabList, Tabs, Typography, tabClasses } from '@mui/joy';
 
 const skills = {
   Technical: [
@@ -28,12 +28,20 @@ const skills = {
       proficiency: 'Competent',
     },
     {
+      name: 'Vue.js',
+      proficiency: 'Beginner',
+    },
+    {
       name: 'Node.js',
       proficiency: 'Competent',
     },
     {
       name: 'Express.js',
       proficiency: 'Competent',
+    },
+    {
+      name: 'Laravel',
+      proficiency: 'Beginner',
     },
     {
       name: 'PostgreSQL',
@@ -45,6 +53,14 @@ const skills = {
     },
     {
       name: 'GraphQL',
+      proficiency: 'Competent',
+    },
+    {
+      name: 'HTML',
+      proficiency: 'Competent',
+    },
+    {
+      name: 'CSS',
       proficiency: 'Competent',
     },
     {
@@ -66,11 +82,15 @@ const skills = {
       proficiency: undefined,
     },
     {
-      name: 'Teamwork',
+      name: 'Collaboration',
       proficiency: undefined,
     },
     {
       name: 'Communication',
+      proficiency: undefined,
+    },
+    {
+      name: 'Critical Thinking',
       proficiency: undefined,
     },
   ],
@@ -80,26 +100,41 @@ export const Skills = () => {
   const [value, setValue] = useState(0);
 
   const handleChange = (
-    event: React.SyntheticEvent<Element, Event>,
-    newValue: string | number | boolean,
+    event: React.SyntheticEvent<Element, Event> | null,
+    newValue: string | number | null,
   ) => {
     setValue(newValue as number);
   };
 
   return (
     <Stack direction="column" p={4} spacing={2}>
-      <Typography level="h5" gutterBottom>
+      <Typography level="h4" gutterBottom>
         Skills
       </Typography>
-      <Tabs value={value} size="md" onChange={handleChange} sx={{ borderRadius: 'md' }}>
-        <TabList variant="plain">
+      <Tabs
+        value={value}
+        size="lg"
+        onChange={handleChange}
+        sx={{ borderRadius: 'lg', [`& .${tabClasses.root}`]: { fontSize: 'md' } }}
+      >
+        <TabList
+          variant="plain"
+          tabFlex={1}
+          sx={{
+            p: 0.5,
+            gap: 0.5,
+            borderRadius: 'lg',
+          }}
+        >
           {Object.keys(skills).map((key, index) => (
             <Tab
+              disableIndicator
               value={index}
               variant={value === index ? 'solid' : 'plain'}
               color={value === index ? 'primary' : 'neutral'}
             >
               {key}
+              {/* <Typography level="body-md">{key}</Typography> */}
             </Tab>
           ))}
         </TabList>
@@ -110,7 +145,11 @@ export const Skills = () => {
             {entry[1].map(({ name, proficiency }) => (
               <Box display="flex" justifyContent="space-between">
                 <Typography>{name}</Typography>
-                {proficiency && <Chip size="sm">{proficiency}</Chip>}
+                {proficiency && (
+                  <Chip size="sm" color="primary" variant="solid">
+                    {proficiency}
+                  </Chip>
+                )}
               </Box>
             ))}
           </Stack>

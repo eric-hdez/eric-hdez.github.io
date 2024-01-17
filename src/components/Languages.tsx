@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Chip, Stack, Typography } from '@mui/joy';
 
-const Badge = ({ label }: { label: string }) => <Chip size="sm">{label}</Chip>;
+const Badge = ({ label }: { label: string }) => <Chip size="sm" color="primary" variant="solid">{label}</Chip>;
 
 const languages = [
   {
@@ -17,7 +17,7 @@ const languages = [
 export const Languages = () => {
   return (
     <Stack direction="column" p={4} spacing={2}>
-      <Typography level="h5" gutterBottom>
+      <Typography level="h4" gutterBottom>
         Languages
       </Typography>
       <Stack direction="column" spacing={2}>

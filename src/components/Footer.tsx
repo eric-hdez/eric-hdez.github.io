@@ -6,9 +6,9 @@ import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 
 const Copyright = () => {
   return (
-    <Typography level="body2">
+    <Typography level="body-md">
       {'Copyright © '}
-      <Link href="https://eric-hdez.github.io">Eric Hernandez</Link> {new Date().getFullYear()}
+      <Link href="https://www.eric-hdez.dev">Eric Hernandez</Link> {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
@@ -16,12 +16,12 @@ const Copyright = () => {
 
 const buttons = [
   {
-    link: 'mailto:eherna97@ucsc.edu',
+    link: 'mailto:eric-hdez@proton.me',
     description: 'Eric\'s Email Address',
     icon: <EmailRoundedIcon />,
   },
   {
-    link: 'https://www.linkedin.com/in/ericherna19/',
+    link: 'https://www.linkedin.com/in/eric-hdez',
     description: 'Eric\'s LinkedIn Profile',
     icon: <LinkedInIcon />,
   },
@@ -45,6 +45,7 @@ export const StickyFooter = () => {
             href={link}
             title={description}
             aria-label={description}
+            color="primary"
           >
             {icon}
           </IconButton>

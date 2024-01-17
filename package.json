@@ -17,9 +17,10 @@
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "@mui/icons-material": "*",
+    "@mui/joy": "*",
     "@mui/lab": "*",
     "@mui/material": "*",
-    "@mui/joy": "*",
+    "firebase": "^9.18.0",
     "gh-pages": "*",
     "prop-types": "*",
     "react": "*",
@@ -50,7 +51,8 @@
     "lint": "eslint . --fixAll",
     "format": "prettier --write .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "github-deploy": "gh-pages -d build",
+    "firebase-deploy": "npm run build && firebase deploy --only hosting:eric-hdez"
   },
   "browserslist": {
     "production": [

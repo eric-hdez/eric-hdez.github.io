@@ -38,7 +38,7 @@ const iconStyle = {
 
 const projects: Project[] = [
   {
-    name: 'Capstone Project: Baskin Marketplace',
+    name: 'Baskin Marketplace',
     title: 'A Full Stack Marketplace Web Application',
     icon: <StoreRoundedIcon color="primary" sx={iconStyle} />,
     link: 'https://www.baskin.app',
@@ -51,15 +51,12 @@ const projects: Project[] = [
     disabled: false,
   },
   {
-    name: 'Personal Portfolio',
-    title: 'The website you are currently on!',
-    icon: <CodeRoundedIcon color="primary" sx={iconStyle} />,
-    link: 'https://www.github.com/eric-hdez/eric-hdez.github.io',
+    name: 'Schmidt-Samoa Cryptosystem',
+    title: 'A simple implementation of the Schmidt-Samoa Cryptosystem.',
+    icon: <KeyRoundedIcon color="primary" sx={iconStyle} />,
+    link: 'https://www.github.com/eric-hdez/schmidt-samoa-cryptosystem',
     directive: 'More details',
-    description: [
-      'Developed this personal website using Typescript, React.js, Material UI, and Joy UI',
-      'Website is hosted via Github Pages',
-    ],
+    description: ['Python and C implementation of the Schmidt-Samoa Cryptosystem'],
     disabled: false,
   },
   {
@@ -70,7 +67,18 @@ const projects: Project[] = [
     directive: 'More details',
     description: [
       'Multi-threaded HTTP Server in C that serves atomic GET, PUT, and APPEND requests',
-      'Implements asynchronous IO using epoll and non-blocking IO',
+    ],
+    disabled: false,
+  },
+  {
+    name: 'Personal Portfolio',
+    title: 'The website you are currently on!',
+    icon: <CodeRoundedIcon color="primary" sx={iconStyle} />,
+    link: 'https://www.github.com/eric-hdez/eric-hdez.github.io',
+    directive: 'More details',
+    description: [
+      'Developed this personal website using Typescript, React.js, Material UI, and Joy UI',
+      'Website is hosted via Google Firebase',
     ],
     disabled: false,
   },
@@ -83,18 +91,6 @@ const projects: Project[] = [
     description: [
       'Classic game of Snake, implemented in Python using Pygame',
       'Implements start and end screens with replayability and tracks single session high score',
-    ],
-    disabled: false,
-  },
-  {
-    name: 'Schmidt-Samoa Cryptosystem',
-    title: 'A simple implementation of the Schmidt-Samoa Cryptosystem.',
-    icon: <KeyRoundedIcon color="primary" sx={iconStyle} />,
-    link: 'https://www.github.com/eric-hdez/schmidt-samoa-cryptosystem',
-    directive: 'More details',
-    description: [
-      'Python and C implementation of the Schmidt-Samoa Cryptosystem',
-      'C implementation uses the GNU Multiple Precision Library',
     ],
     disabled: false,
   },
@@ -113,13 +109,14 @@ const Project = ({ name, title, icon, link, directive, description }: Project) =
         <Box minWidth="180px" maxWidth="180px">
           <Stack direction="column" height="100%" justifyContent="flex-end" gap={1}>
             {icon}
-            <Typography>{name}</Typography>
+            <Typography level="title-md">{name}</Typography>
             <Link
               component="button"
               variant="plain"
               underline="none"
               width="fit-content"
               endDecorator={<EastRoundedIcon />}
+              borderRadius="md"
               sx={{ display: { sm: 'none' } }}
               onClick={toggleModal}
             >
@@ -128,17 +125,17 @@ const Project = ({ name, title, icon, link, directive, description }: Project) =
           </Stack>
         </Box>
         <Divider orientation="vertical" sx={{ display: { xs: 'none', sm: 'flex' } }} />
-        <Box pl={2} width="100%" height="100%" display={{ xs: 'none', sm: 'block' }}>
+        <Box pl={0} width="100%" height="100%" display={{ xs: 'none', sm: 'block' }}>
           <Stack direction="column" height="inherit">
-            <Typography>Description</Typography>
-            <Box my={1} sx={{ overflow: { md: 'scroll' } }}>
-              <List sx={{ mx: 0, '--List-decorator-size': '25px' }}>
+            <Typography level="title-md">Summary</Typography>
+            <Box my={1} sx={{ overflowY: { sm: 'auto', md: 'auto' } }}>
+              <List sx={{ mx: 0, py: 0, '--List-decorator-size': '25px' }}>
                 {description.map(line => (
                   <ListItem sx={{ px: '0px', py: '1px' }}>
-                    <ListItemDecorator>
+                    <ListItemDecorator sx={{mr: '-20px'}}>
                       <KeyboardArrowRightRoundedIcon color="primary" />
                     </ListItemDecorator>
-                    <Typography level="body2">{line}</Typography>
+                    <Typography fontSize="sm">{line}</Typography>
                   </ListItem>
                 ))}
               </List>
@@ -173,7 +170,7 @@ const Project = ({ name, title, icon, link, directive, description }: Project) =
 export const Projects = () => {
   return (
     <Stack direction="column" p={4} spacing={2}>
-      <Typography level="h5" gutterBottom>
+      <Typography level="h4" gutterBottom>
         Projects
       </Typography>
       <Grid container spacing={1} p={0}>

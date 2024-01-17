@@ -59,7 +59,7 @@ export const NavBar = ({ height, toggleSidebar }: NavBarProps) => {
       >
         <MenuIcon />
       </IconButton>
-      <Typography level="h5">Eric Hernandez</Typography>
+      <Typography level="h4">Eric Hernandez</Typography>
       <Box display="flex" flexGrow={1} justifyContent="flex-end">
         <Box display={{ xs: 'none', lg: 'flex' }}>
           {navItems.map(item => (
@@ -74,7 +74,7 @@ export const NavBar = ({ height, toggleSidebar }: NavBarProps) => {
               }}
             >
               <Typography
-                level="body1"
+                level="title-sm"
                 fontSize="sm"
                 sx={{
                   '&:hover': {

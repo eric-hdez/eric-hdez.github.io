@@ -4,7 +4,7 @@ import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 
 const schools = [
   {
-    name: 'University of California, Santa Cruz (2019 - present)',
+    name: 'University of California, Santa Cruz (2019 - 2023)',
     degree: 'B.S. in Computer Science',
   },
   {
@@ -16,7 +16,7 @@ const schools = [
 export const Education = () => {
   return (
     <Stack direction="column" p={4} spacing={2}>
-      <Typography level="h5" gutterBottom>
+      <Typography level="h4" gutterBottom>
         Education
       </Typography>
       <List sx={{ p: 0 }}>
@@ -26,8 +26,8 @@ export const Education = () => {
               <SchoolRoundedIcon />
             </ListItemDecorator>
             <ListItemContent>
-              <Typography>{degree}</Typography>
-              <Typography level="body2">{name}</Typography>
+              <Typography level="title-md">{degree}</Typography>
+              <Typography fontSize="sm">{name}</Typography>
             </ListItemContent>
           </ListItem>
         ))}

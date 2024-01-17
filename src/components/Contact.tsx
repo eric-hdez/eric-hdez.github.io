@@ -12,20 +12,20 @@ const contactInfo = [
   {
     contact: (
       <Link
-        href="mailto:eherna97@ucsc.edu"
+        href="mailto:eric-hdez@proton.me"
         target="_blank"
         rel="noopener noreferrer"
         title="Eric's Email"
       >
-        eherna97@ucsc.edu
+        eric-hdez@proton.me
       </Link>
     ),
     icon: <EmailRoundedIcon />,
   },
   {
     contact: (
-      <Link href="https://eric-hdez.github.io/" title="Eric's Personal Website">
-        eric-hdez.github.io
+      <Link href="https://www.eric-hdez.dev" title="Eric's Personal Website">
+        eric-hdez.dev
       </Link>
     ),
     icon: <WebRoundedIcon />,
@@ -35,7 +35,7 @@ const contactInfo = [
 export const Contact = () => {
   return (
     <Stack direction="column" p={4} spacing={2}>
-      <Typography level="h5" gutterBottom>
+      <Typography level="h4" gutterBottom>
         Contact Me
       </Typography>
       <List sx={{ p: 0 }}>

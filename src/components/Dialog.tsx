@@ -28,9 +28,9 @@ export const CustomModal = ({ openModal, toggleModal, title, description, link }
     <Modal open={openModal} onClose={toggleModal}>
       <ModalDialog>
         <Stack direction="column" spacing={1}>
-          <Box display="flex" justifyContent="space-between">
+          <Box display="flex" alignItems="center" justifyContent="space-between">
             <Typography>{title}</Typography>
-            <ModalClose />
+            <ModalClose sx={{ position: 'static' }} />
           </Box>
           <Divider />
           <List sx={{ '--List-decorator-size': '25px' }}>
@@ -39,7 +39,7 @@ export const CustomModal = ({ openModal, toggleModal, title, description, link }
                 <ListItemDecorator>
                   <KeyboardArrowRightRoundedIcon color="primary" />
                 </ListItemDecorator>
-                <Typography level="body2">{line}</Typography>
+                <Typography level="body-md">{line}</Typography>
               </ListItem>
             ))}
           </List>

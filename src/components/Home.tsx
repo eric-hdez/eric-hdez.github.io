@@ -3,11 +3,11 @@ import { Avatar, Grid, IconButton, Link, Stack, Typography } from '@mui/joy';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-import eric from '../img/eric_headshot.jpg';
+import eric from '../img/eric_pfp.jpg';
 
 const buttons = [
   {
-    link: 'https://www.linkedin.com/in/ericherna19/',
+    link: 'https://www.linkedin.com/in/eric-hdez',
     description: 'Eric\'s LinkedIn Profile',
     icon: <LinkedInIcon />,
   },
@@ -24,19 +24,24 @@ export const Home = () => {
       <Grid container xs={12} md={5} lg={4} justifyContent="center">
         <Avatar
           src={eric}
-          sx={{ height: '262px', width: '360px', borderRadius: 'var(--joy-radius-sm)' }}
+          sx={{
+            height: '262px',
+            maxWidth: `calc(100% - 32px)`,
+            width: { xs: '350px', sm: '360px' },
+            borderRadius: 'var(--joy-radius-sm)',
+          }}
         />
       </Grid>
       <Grid xs={12} md={7} lg={8}>
         <Stack direction="column" gap={4}>
-          <Typography level="h4" textAlign="left">
+          <Typography level="h3" textAlign="left">
             Hi There!
             <br />
             I&apos;m Eric Hernandez.
           </Typography>
-          <Typography level="h6">
-            I&apos;m a 4th year Computer Science student at the University of California, Santa
-            Cruz.
+          <Typography level="body-lg">
+            I&apos;m a new graduate with a Bachelor of Science in Computer Science from the
+            University of California, Santa Cruz.
           </Typography>
           <Stack direction="row" spacing={1}>
             {buttons.map(({ link, description, icon }) => (
