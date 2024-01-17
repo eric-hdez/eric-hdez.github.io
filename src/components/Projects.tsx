@@ -132,7 +132,7 @@ const Project = ({ name, title, icon, link, directive, description }: Project) =
               <List sx={{ mx: 0, py: 0, '--List-decorator-size': '25px' }}>
                 {description.map(line => (
                   <ListItem sx={{ px: '0px', py: '1px' }}>
-                    <ListItemDecorator sx={{mr: '-20px'}}>
+                    <ListItemDecorator sx={{ mr: '-20px' }}>
                       <KeyboardArrowRightRoundedIcon color="primary" />
                     </ListItemDecorator>
                     <Typography fontSize="sm">{line}</Typography>
