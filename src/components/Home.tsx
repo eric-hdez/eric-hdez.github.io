@@ -15,7 +15,7 @@ const buttons = [
     color_: 'primary',
   },
   {
-    link: 'https://github.com/eric-hdez',
+    link: 'https://www.github.com/eric-hdez',
     description: 'Eric\'s GitHub Profile',
     icon: <GitHubIcon />,
     color_: 'danger',

@@ -12,7 +12,6 @@ interface NavBarProps {
 
 export interface NavDrawerProps {
   toggleSidebar: () => void;
-  currView: string | undefined;
   toggleCurrView: (e: MouseEvent<HTMLElement>) => void;
 }
 
@@ -58,7 +57,7 @@ export const NavBar = ({ height, toggleSidebar, currView, toggleCurrView }: NavB
   );
 };
 
-export const NavDrawer = ({ toggleSidebar, currView, toggleCurrView }: NavDrawerProps) => {
+export const NavDrawer = ({ toggleSidebar, toggleCurrView }: NavDrawerProps) => {
   const drawerClick = (event: MouseEvent<HTMLElement>) => {
     toggleCurrView(event);
     toggleSidebar();

@@ -41,7 +41,6 @@ export const Portfolio = () => {
   };
 
   const toggleCurrView = (event: MouseEvent<HTMLElement>) => {
-    console.log(event.currentTarget.innerText);
     setCurrView(event.currentTarget.innerText);
   };
 
@@ -69,11 +68,7 @@ export const Portfolio = () => {
           justifyContent="center"
           borderBottom={2}
         >
-          <NavDrawer
-            toggleSidebar={toggleSidebar}
-            currView={currView}
-            toggleCurrView={toggleCurrView}
-          />
+          <NavDrawer toggleSidebar={toggleSidebar} toggleCurrView={toggleCurrView} />
         </Box>
         {sidebarOpen && <BackDrop onClick={toggleSidebar} />}
         <Container maxWidth="lg">

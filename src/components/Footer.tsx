@@ -4,10 +4,8 @@ import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 
 const Copyright = () => {
   return (
-    <Typography level="body-md">
-      {'Copyright © '}
-      <Link href="https://www.eric-hdez.dev">Eric Hernandez</Link> {new Date().getFullYear()}
-      {'.'}
+    <Typography level="body-md" textAlign="center">
+      {`Copyright © ${new Date().getFullYear()} Eric Hernandez. All rights reserved.`}
     </Typography>
   );
 };
@@ -42,11 +40,6 @@ export const StickyFooter = () => {
         ))}
       </Stack>
       <Copyright />
-      <Box>
-        <Typography level="title-md" color="warning">
-          This Website is Still Being Touched Up :D
-        </Typography>
-      </Box>
     </Stack>
   );
 };
